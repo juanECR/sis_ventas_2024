@@ -1,4 +1,8 @@
 <?php
+require_once "./controller/vistas_control.php";
 
-echo "hello world";
+$vista = new VistasControlador();
+
+$vista->obtener_plantillaControlador();
+
 ?>

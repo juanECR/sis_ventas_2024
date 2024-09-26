@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <style>
+        .nav-tabs .nav-link {
+            color: #6c757d;
+        }
+        .nav-tabs .nav-link.active {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg" style="background: black;position:fixed;z-index: 1;width: 100%;margin-top: -75px;">
+        <div class="container-fluid" >
+          <a class="navbar-brand " href="index.html" ><img src="imagenes/logo-elegant.png" alt="" width="150px" height="50px"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
+              <li class="nav-item" >
+                <a class="nav-link active text-white" aria-current="page" href="index.html">Inicio</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="productos.html">Productos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Categorias
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="pros.html">Hombres</a></li>
+                  <li><a class="dropdown-item" href="prosmuj.html">Mujeres</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="pros.html">Niños</a></li>
+                </ul>
+              </li>
+              <li class="nav-item"style="box-shadow: 0px 2px 0px 0px white;">
+                <a class="nav-link text-white" href="perfil.html">Perfil</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="info_empresa.html">Nosotros</a>
+              </li>
+            </ul>
+            <a href="carrito.html"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="white" class="bi bi-cart4" viewBox="0 0 16 16">
+              <path d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l.5 2H5V5zM6 5v2h2V5zm3 0v2h2V5zm3 0v2h1.36l.5-2zm1.11 3H12v2h.61zM11 8H9v2h2zM8 8H6v2h2zM5 8H3.89l.5 2H5zm0 5a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0"/>
+            </svg></a>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-light" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+    </nav>
+<div class="conteiner-fluid" style="margin-top: 68px;min-height: 500px;">
+    <div class="container" >
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" id="cards-tab" data-bs-toggle="tab" data-bs-target="#cards" type="button" role="tab" aria-controls="cards" aria-selected="true">
+                    <i class="bi bi-credit-card"></i> Mis perfil
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">
+                    <i class="bi bi-person"></i> Mis tarjetas
+                </button>
+            </li>
+
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="addresses-tab" data-bs-toggle="tab" data-bs-target="#addresses" type="button" role="tab" aria-controls="addresses" aria-selected="false">
+                    <i class="bi bi-geo-alt"></i> Mis direcciones
+                </button>
+            </li>
+         
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" id="orders-tab" data-bs-toggle="tab" data-bs-target="#orders" type="button" role="tab" aria-controls="orders" aria-selected="false">
+                    <i class="bi bi-bag"></i> Mis pedidos
+                </button>
+            </li>
+        </ul>
+        <div class="tab-content mt-3" id="myTabContent">
+            <div class="tab-pane fade show active" id="cards" role="tabpanel" aria-labelledby="cards-tab">
+               <h3>Mi perfil</h3>
+                <div class="container profile-section" style="margin-top: 68px;">
+                    <div class="text-center mb-4">
+                        <img src="https://i.pinimg.com/564x/bd/1c/c7/bd1cc751865c67de695216da045579d5.jpg" class="rounded-circle" alt="Profile" width="100">
+                        <p class="mt-2">@user1234</p>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <label>CORREO ELECTRÓNICO</label>
+                            <input type="email" class="form-control" value="••••••••••@gmail.com" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>TELÉFONO</label>
+                            <input type="tel" class="form-control" value="+51 9••••••••" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>ID</label>
+                            <input type="text" class="form-control" value="••••••456" readonly>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>REGIÓN</name</label>
+                            <input type="text" class="form-control" value="PERU"  >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>CONTRASEÑA</label>
+                            <input type="password" class="form-control" value="••••••••" >
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label>DISPOSITIVO</label>
+                            <input type="text" class="form-control" value="redmi 10c" readonly>
+                        </div>
+                    </div>
+                    <div class="d-grid gap-2 col-6 mx-auto m-3">
+                      <button class="btn btn-outline-danger" type="button">MODIFICAR DATOS</button>
+                      <button class="btn btn-danger" type="button">ELIMINAR CUENTA</button>
+                    </div>
+                </div>
+      
+            </div>
+            <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <h3>Tarjetas de crédito</h3>
+                <a href="info_pago.html"><button class="btn btn-outline-danger mt-3">Añadir tarjeta de crédito</button></a>
+                <p class="mt-4 text-center fw-bold">¡Aún no tienes ningún método de pago registrado!</p>
+            </div>
+            <div class="tab-pane fade" id="addresses" role="tabpanel" aria-labelledby="addresses-tab">
+                <h3>Mis direcciones</h3>
+                <button class="btn btn-outline-danger mt-3">Añadir Direccion</button>
+                <p class="mt-4 text-center fw-bold">¡Aún no tienes ningúna direccion registrada!</p>
+            </div>
+            <div class="tab-pane fade" id="orders" role="tabpanel" aria-labelledby="orders-tab">
+                <h3>Mis pedidos</h3>
+                <p class="mt-4 text-center fw-bold">¡Aun no tienes pedidos!</p>
+                <a href="productos.html"><button class="btn btn-outline-danger mt-3">Comprar</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <footer class="bg-black text-white py-5">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 mb-4">
+              <h5 class="text-uppercase mb-4">Elegant</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white hover-effect">Trabaja con nosotros</a></li>
+                <li><a href="#" class="text-white hover-effect">Nosotros</a></li>
+                <li><a href="#" class="text-white hover-effect">Corporación Elegant</a></li>
+                <li><a href="#" class="text-white hover-effect">Certificación OEA</a></li>
+                <li><a href="#" class="text-white hover-effect">Tiendas</a></li>
+                <li><a href="#" class="text-white hover-effect">Contáctanos</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+              <h5 class="text-uppercase mb-4">Marcas</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white hover-effect">Xiomi</a></li>
+                <li><a href="#" class="text-white hover-effect">Hawk</a></li>
+                <li><a href="#" class="text-white hover-effect">New York Woman</a></li>
+                <li><a href="#" class="text-white hover-effect">New York Man</a></li>
+                <li><a href="#" class="text-white hover-effect">Elegant Mujer</a></li>
+                <li><a href="#" class="text-white hover-effect">Elegant Hombre</a></li>
+                <li><a href="#" class="text-white hover-effect">Elegant Kids</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+              <h5 class="text-uppercase mb-4">Atención al cliente</h5>
+              <ul class="list-unstyled">
+                <li><a href="#" class="text-white hover-effect">Preguntas frecuentes</a></li>
+                <li><a href="#" class="text-white hover-effect">Términos y condiciones</a></li>
+                <li><a href="#" class="text-white hover-effect">Cambios y devoluciones</a></li>
+                <li><a href="#" class="text-white hover-effect">Política y protección de datos</a></li>
+                <li><a href="#" class="text-white hover-effect">Bases legales</a></li>
+                <li><a href="#" class="text-white hover-effect">Bases legales tiendas</a></li>
+                <li><a href="#" class="text-white hover-effect">Ley que regula el plástico</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3 mb-4">
+              <h5 class="text-uppercase mb-4">Información</h5>
+              <p>Razón Social: TRADING FASHION LINE S.A.</p>
+              <p>RUC: 20501057682</p>
+              <p>Dirección Legal: Av. Santuario Nro. 1323</p>
+              <img src="https://sophiebebestore.com/wp-content/uploads/2022/10/Libro-de-reclmaciones-sin-fondo-300x300.png" alt="Libro de reclamaciones" class="img-fluid mt-3" width="150px" height="150px">
+            </div>
+          </div>
+        </div>
+      </footer>
+      
+
+</body>
+</html>
