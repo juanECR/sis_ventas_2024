@@ -6,5 +6,5 @@ const BD_USER = "";
 const BD_PASSWORD = "";
 
 // Ingresar Link De Proyecto
-const BASE_URL = "";
+const BASE_URL = "https://localhost/sis_ventas_2024/";
 ?>
