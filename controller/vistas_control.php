@@ -7,14 +7,14 @@ class  VistasControlador extends VistaModelo{
     }
 
     public function ObtenerVistaControlador(){
-        if ($_GET['views']) {
+        if (isset($_GET['views'])) {
            $ruta = explode("/",$_GET['views']);
            $respuesta = VistaModelo::obtener_vista($ruta[0]);
         } else {
             $respuesta = "login";
         }
         return $respuesta;
-        
+      
     }
 }
 ?>
