@@ -79,7 +79,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/564x/fd/bd/3d/fdbd3de66dd752c51311abfd58a9bcd8.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/564x/fd/bd/3d/fdbd3de66dd752c51311abfd58a9bcd8.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-30%</span>
               </div>
               <div class="card-body">
@@ -102,7 +102,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/a4/da/6b/a4da6b0fcc67aea4d83ab5dd8b73ba5f.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/a4/da/6b/a4da6b0fcc67aea4d83ab5dd8b73ba5f.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -125,7 +125,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/8c/5a/ed/8c5aeda6a966e5a69f46c6676791e199.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/8c/5a/ed/8c5aeda6a966e5a69f46c6676791e199.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-40%</span>
               </div>
               <div class="card-body">
@@ -148,7 +148,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/564x/6c/47/9c/6c479c431b70cc01b4aa6ad40f42ec76.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/564x/6c/47/9c/6c479c431b70cc01b4aa6ad40f42ec76.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -172,7 +172,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/3f/e6/02/3fe60265c26a00136590f25fbb1f3417.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/3f/e6/02/3fe60265c26a00136590f25fbb1f3417.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -195,7 +195,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/65/c3/7d/65c37da7ed9d08f22654e9c703131785.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/65/c3/7d/65c37da7ed9d08f22654e9c703131785.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -218,7 +218,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/ca/42/78/ca4278d24c4f5b84da7f2c076db9d4b1.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/ca/42/78/ca4278d24c4f5b84da7f2c076db9d4b1.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -241,7 +241,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/564x/1c/cf/23/1ccf23d561ba9de4e66677653412428a.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/564x/1c/cf/23/1ccf23d561ba9de4e66677653412428a.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -264,7 +264,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/b6/dd/70/b6dd701f162467e67436ea11889fd8c8.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/b6/dd/70/b6dd701f162467e67436ea11889fd8c8.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -287,7 +287,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/564x/26/b6/2d/26b62d9ddf307ca23d24cedde7b1a0c0.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/564x/26/b6/2d/26b62d9ddf307ca23d24cedde7b1a0c0.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -310,7 +310,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/564x/af/3b/d9/af3bd976e7071ff6eef188b2f7ff3b02.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/564x/af/3b/d9/af3bd976e7071ff6eef188b2f7ff3b02.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">
@@ -333,7 +333,7 @@
           <div class="col">
             <div class="card h-100">
               <div class="position-relative">
-               <a href="detalleproducto.html"><img src="https://i.pinimg.com/736x/79/ff/2d/79ff2dab66a0b43cce6bd026a828c1b2.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
+               <a href="<?php BASE_URL?>DetalleProducto"><img src="https://i.pinimg.com/736x/79/ff/2d/79ff2dab66a0b43cce6bd026a828c1b2.jpg" class="card-img-top" alt="Casaca Hombre Liam Rojo Carmin"></a> 
                 <span class="position-absolute top-0 start-0 bg-dark text-white px-2 py-1">-50%</span>
               </div>
               <div class="card-body">

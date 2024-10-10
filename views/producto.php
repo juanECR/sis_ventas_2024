@@ -36,7 +36,7 @@
       <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
           <h5 class="card-title">Para él</h5>
           <p class="card-text">Hasta 50% dscto.</p>
-          <a href="pros.html" class="btn btn-light btn-sm">VER MÁS</a>
+          <a href="<?php BASE_URL?>proHombre" class="btn btn-light btn-sm">VER MÁS</a>
       </div>
   </div>
 </div>
@@ -46,7 +46,7 @@
       <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
           <h5 class="card-title">Para ella</h5>
           <p class="card-text">Hasta 50% dscto.</p>
-          <a href="prosmuj.html" class="btn btn-light btn-sm">VER MÁS</a>
+          <a href="<?php BASE_URL?>ProMujer" class="btn btn-light btn-sm">VER MÁS</a>
       </div>
   </div>
 </div>
@@ -56,7 +56,7 @@
       <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
           <h5 class="card-title">Para ellos</h5>
           <p class="card-text">Hasta 50% dscto.</p>
-          <a href="#" class="btn btn-light btn-sm">VER MÁS</a>
+          <a href="<?php BASE_URL?>proHombre" class="btn btn-light btn-sm">VER MÁS</a>
       </div>
   </div>
 </div>
@@ -66,7 +66,7 @@
       <div class="card-img-overlay d-flex flex-column justify-content-end align-items-center">
           <h5 class="card-title">Para tus mascotas</h5>
           <p class="card-text">Hasta 70% dscto.</p>
-          <a href="#" class="btn btn-light btn-sm">VER MÁS</a>
+          <a href="<?php BASE_URL?>404" class="btn btn-light btn-sm">VER MÁS</a>
       </div>
   </div>
 </div>
@@ -83,8 +83,8 @@
                 <p class="card-text" >Some quick example text to build he ard title and make up thejh, bulk of the card's content.</p>
                 </div>
                 <div class="btn-group">
-                  <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                  <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                  <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
                 </div>
               </div>
             </div>
@@ -98,8 +98,8 @@
               <p class="card-text" >Some quick example text to build he ard title and make up thejh, bulk of the card's content.</p>
               </div>
               <div class="btn-group">
-                <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                  <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
               </div>
             </div>
           </div>
@@ -113,8 +113,8 @@
             <p class="card-text" >Some quick example text to build he ard title and make up thejh, bulk of the card's content.</p>
             </div>
             <div class="btn-group">
-              <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-              <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                 <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
             </div>
           </div>
         </div>
@@ -128,8 +128,8 @@
           <p class="card-text" >Some quick example text to build he ard title and make up thejh, bulk of the card's content.</p>
           </div>
           <div class="btn-group">
-            <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-            <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                  <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
           </div>
         </div>
       </div>
@@ -143,8 +143,8 @@
         <p class="card-text" >Some quick example text to build he ard title and make up thejh, bulk of the card's content.</p>
         </div>
         <div class="btn-group">
-          <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-          <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                 <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
         </div>
       </div>
     </div>
@@ -158,8 +158,8 @@
         <p class="card-text" >Men's Stylish Hoodies 2024: Trendy, Comfortable, and Affordable Fashion Must-Haves.</p>
         </div>
         <div class="btn-group">
-          <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-          <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                  <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
         </div>
       </div>
     </div>
@@ -173,8 +173,8 @@
         <p class="card-text" >Hombres cazadora universidad con estampado de letra sin capucha.</p>
         </div>
         <div class="btn-group">
-          <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-          <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                  <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
         </div>
       </div>
     </div>
@@ -188,8 +188,8 @@
         <p class="card-text" >Men Rose Print Striped Trim Varsity Jacket & Sweatpants Without Hoodie.</p>
         </div>
         <div class="btn-group">
-          <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-          <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                 <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                  <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
         </div>
       </div>
     </div>
@@ -207,7 +207,7 @@
             <div class="card-body">
               <h5 class="card-title">camisa</h5>
               <p class="card-text">Polo Cuello Camisa Hombre Yotun Coco.</p>
-              <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+              <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
             </div>
           </div>
           <div class="card" style="width: 18rem;height: 380px;">
@@ -215,7 +215,7 @@
             <div class="card-body">
               <h5 class="card-title">camisa</h5>
               <p class="card-text">Polo Cuello Camisa Hombre Angelo Acero Intenso</p>
-              <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+              <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
             </div>
           </div>
           <div class="card" style="width: 18rem;height: 380px;">
@@ -223,7 +223,7 @@
             <div class="card-body">
               <h5 class="card-title">camisa</h5>
               <p class="card-text">Polo Cuello Camisa Hombre Alfonso Gris Noche</p>
-              <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+              <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
             </div>
           </div>
           <div class="card" style="width: 18rem;height: 380px;">
@@ -231,7 +231,7 @@
             <div class="card-body">
               <h5 class="card-title">Casaca</h5>
               <p class="card-text">Casaca Mujer lhisa Stone Negro</p>
-              <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+              <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
             </div>
           </div>
         </div>
@@ -244,7 +244,7 @@
               <div class="card-body">
                 <h5 class="card-title">blusa</h5>
                 <p class="card-text">Blusa Mujer Kendall Total Dark Bleach</p>
-                <a href="#" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
             <div class="card" style="width: 18rem;height: 380px;">
@@ -252,7 +252,7 @@
               <div class="card-body">
                 <h5 class="card-title">Casaca</h5>
                 <p class="card-text">Casaca Jean Hombre Nee Azul Oscuro</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
             <div class="card" style="width: 18rem;height: 380px;">
@@ -260,7 +260,7 @@
               <div class="card-body">
                 <h5 class="card-title">Jean</h5>
                 <p class="card-text">Jean Hombre Barak Total Smok Bleach</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
             <div class="card" style="width: 18rem;height: 380px;">
@@ -268,7 +268,7 @@
               <div class="card-body">
                 <h5 class="card-title">Bermuda</h5>
                 <p class="card-text">Bermuda Denim Hombre Hoper Total Dark Blackr</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
           </div>
@@ -281,7 +281,7 @@
               <div class="card-body">
                 <h5 class="card-title">camisa</h5>
                 <p class="card-text">Camisa Hombre Ilyan Total Bleach</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
             <div class="card" style="width: 18rem;height: 380px;">
@@ -289,7 +289,7 @@
               <div class="card-body">
                 <h5 class="card-title">Bermuda</h5>
                 <p class="card-text">Bermuda Hombre Bernardo Dirty Wash</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
             <div class="card" style="width: 18rem;height: 380px;">
@@ -297,7 +297,7 @@
               <div class="card-body">
                 <h5 class="card-title">Casaca</h5>
                 <p class="card-text">Casaca Mujer Mary Core Azul Poly</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
             <div class="card" style="width: 18rem;height: 380px;">
@@ -305,7 +305,7 @@
               <div class="card-body">
                 <h5 class="card-title">Jogger</h5>
                 <p class="card-text">Jogger Mujer Rosa Core Gris Fit Poly Htr</p>
-                <a href="carrito.html" class="btn btn-outline-primary">Comprar</a>
+                <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
               </div>
             </div>
           </div>

@@ -44,19 +44,19 @@
               <img src="https://i.pinimg.com/736x/fd/cd/2b/fdcd2b4b5f53c111e8e83598a8996784.jpg" width="200px" height="200px" alt="" style="border-radius: 50%;">
               <h2 class="fw-normal text-body-secondary">Hombres</h2>
               <p class="text-body-secondary">El estilo es la ropa de tu personalidad.</p>
-              <p><a class="btn btn-outline-danger" href="pros.html">Ver categoria »</a></p>
+              <p><a class="btn btn-outline-danger" href="<?php BASE_URL?>proHombre">Ver categoria »</a></p>
             </div>
             <div class="col-lg-4 text-white">
               <img src="https://i.pinimg.com/564x/02/a6/b1/02a6b13f10692005aacd1740919c4036.jpg" width="200px" height="200px" alt="" style="border-radius: 50%;">
               <h2 class="fw-normal text-body-secondary">Mujeres</h2>
               <p class="text-body-secondary">Haz que tu verdadera identidad prevalezca.</p>
-              <p><a class="btn btn-outline-danger" href="prosmuj.html">Ver categoria »</a></p>
+              <p><a class="btn btn-outline-danger" href="<?php BASE_URL?>ProMujer">Ver categoria »</a></p>
             </div>
             <div class="col-lg-4 text-white">
               <img src="https://i.pinimg.com/564x/ed/72/97/ed7297a55d505b00e505d0f155697ea1.jpg" width="200px" height="200px" alt="" style="border-radius: 50%;">
               <h2 class="fw-normal text-body-secondary">Niños</h2>
               <p class="text-body-secondary">Nunca eres demasiado pequeño para usar ropa de diseñador.</p>
-              <p><a class="btn btn-outline-danger" href="#">Ver categoria »</a></p>
+              <p><a class="btn btn-outline-danger" href="<?php BASE_URL?>proHombre">Ver categoria »</a></p>
             </div>
           </div>
         </div>
@@ -71,8 +71,8 @@
                       <p class="card-text" >Men Colourblock Antler Embroidery Tee Without Necklace</p>
                       </div>
                       <div class="btn-group">
-                        <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                        <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                        <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
                       </div>
                     </div>
                   </div>
@@ -85,8 +85,8 @@
                     <p class="card-text" >Pantalones jogger de entrenamiento en blanco color gris vista frontal sobre fondo blanco — Fotografía de stock del banco de imágenes libres de derechos</p>
                     </div>
                     <div class="btn-group">
-                      <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                      <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                        <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
                     </div>
                   </div>
                 </div>
@@ -99,8 +99,8 @@
                   <p class="card-text" >Para pies delgados recomendamos comprar la talla inferior. Revisa la equivalencia, H: Hombre | M: Mujer.</p>
                   </div>
                   <div class="btn-group">
-                    <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                    <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                       <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
                   </div>
                 </div>
               </div>
@@ -113,8 +113,8 @@
                 <p class="card-text" >CASACA TERREX MULTI CIERRE FRONTAL FLEECE</p>
                 </div>
                 <div class="btn-group">
-                  <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                  <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                        <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
                 </div>
               </div>
             </div>
@@ -127,8 +127,8 @@
               <p class="card-text" >CASACA TERREX MULTI LIGHT CIERRE FRONTAL FELPA</p>
               </div>
               <div class="btn-group">
-                <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-                <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                        <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
               </div>
             </div>
           </div>
@@ -141,8 +141,8 @@
             <p class="card-text" >PANTALÓN AJUSTADO AEROREADY SERENO REGULAR CUT 3 TIRAS PIERNA CÓNICA</p>
             </div>
             <div class="btn-group">
-              <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-              <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                        <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
             </div>
           </div>
         </div>
@@ -155,8 +155,8 @@
           <p class="card-text" >POLO ESSENTIALS LOGO LINEAL BORDADO TEJIDO JERSEY</p>
           </div>
           <div class="btn-group">
-            <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-            <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                        <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
           </div>
         </div>
       </div>
@@ -169,8 +169,8 @@
         <p class="card-text" >CHIMPUNES F50 LEAGUE PASTO SINTÉTICO</p>
         </div>
         <div class="btn-group">
-          <a href="carrito.html"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
-          <a href="detalleproducto.html"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
+                         <a href="<?php BASE_URL?>carrito"><button type="button" class="btn btn-sm btn-outline-danger">Comprar</button></a>
+                        <a href="<?php BASE_URL?>DetalleProducto"><button type="button" class="btn btn-sm btn-outline-success">Ver</button></a>
         </div>
       </div>
     </div>
@@ -186,7 +186,7 @@
       <div>
         <h3 class="fs-2 text-body-emphasis">Compra segura</h3>
         <p>Compra en linea yu retira en tienda.</p>
-        <a href="#" class="btn btn-secondary">
+        <a href="<?php BASE_URL?>nosotros" class="btn btn-secondary">
           Mas informacion
         </a>
       </div>
@@ -198,7 +198,7 @@
       <div>
         <h3 class="fs-2 text-body-emphasis">Retira en tienda</h3>
         <p>En mas de 60 tienda a nivel nacional.</p>
-        <a href="#" class="btn btn-secondary">
+        <a href="<?php BASE_URL?>nosotros" class="btn btn-secondary">
          Mas informacion
         </a>
       </div>
@@ -210,7 +210,7 @@
       <div>
         <h3 class="fs-2 text-body-emphasis">Cambios y devoluciones</h3>
         <p>Solicitalo en una de nuestras 60 tiendas a nivel nacional.</p>
-        <a href="#" class="btn btn-secondary">
+        <a href="<?php BASE_URL?>nosotros" class="btn btn-secondary">
           Mas informacion
         </a>
       </div>

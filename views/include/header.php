@@ -14,7 +14,7 @@
     <!-----------------------------menu---------------------- -->
     <nav class="navbar navbar-expand-lg" style="background: black;position:fixed;z-index: 1;width: 100%;height:70px; margin-top:-70px;">
       <div class="container-fluid" >
-        <a class="navbar-brand " href="index.html" ><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/UNICEF_Logo.png/800px-UNICEF_Logo.png" alt="logo" width="150px" height="50px"></a>
+        <a class="navbar-brand " href="index.html" ><img src="https://www.alonsport.es/users/26844/shop/logo.jpg" alt="logo" width="150px" height="50px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>

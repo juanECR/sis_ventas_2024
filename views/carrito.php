@@ -97,7 +97,7 @@
                   <div class="card-body">
                     <h5 class="card-title">camisa</h5>
                     <p class="card-text">Polo Cuello Camisa Hombre Yotun Coco.</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                   </div>
                 </div>
                 <div class="card" style="width: 18rem;height: 380px;">
@@ -105,7 +105,7 @@
                   <div class="card-body">
                     <h5 class="card-title">camisa</h5>
                     <p class="card-text">Polo Cuello Camisa Hombre Angelo Acero Intenso</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                   </div>
                 </div>
                 <div class="card" style="width: 18rem;height: 380px;">
@@ -113,7 +113,7 @@
                   <div class="card-body">
                     <h5 class="card-title">camisa</h5>
                     <p class="card-text">Polo Cuello Camisa Hombre Alfonso Gris Noche</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                   </div>
                 </div>
                 <div class="card" style="width: 18rem;height: 380px;">
@@ -121,7 +121,7 @@
                   <div class="card-body">
                     <h5 class="card-title">Casaca</h5>
                     <p class="card-text">Casaca Mujer lhisa Stone Negro</p>
-                    <a href="#" class="btn btn-primary">Comprar</a>
+                    <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                   </div>
                 </div>
               </div>
@@ -134,7 +134,7 @@
                     <div class="card-body">
                       <h5 class="card-title">blusa</h5>
                       <p class="card-text">Blusa Mujer Kendall Total Dark Bleach</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;height: 380px;">
@@ -142,7 +142,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Casaca</h5>
                       <p class="card-text">Casaca Jean Hombre Nee Azul Oscuro</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;height: 380px;">
@@ -150,7 +150,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Jean</h5>
                       <p class="card-text">Jean Hombre Barak Total Smok Bleach</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;height: 380px;">
@@ -158,7 +158,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Bermuda</h5>
                       <p class="card-text">Bermuda Denim Hombre Hoper Total Dark Blackr</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                 </div>
@@ -171,7 +171,7 @@
                     <div class="card-body">
                       <h5 class="card-title">camisa</h5>
                       <p class="card-text">Camisa Hombre Ilyan Total Bleach</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;height: 380px;">
@@ -179,7 +179,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Bermuda</h5>
                       <p class="card-text">Bermuda Hombre Bernardo Dirty Wash</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;height: 380px;">
@@ -187,7 +187,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Casaca</h5>
                       <p class="card-text">Casaca Mujer Mary Core Azul Poly</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                   <div class="card" style="width: 18rem;height: 380px;">
@@ -195,7 +195,7 @@
                     <div class="card-body">
                       <h5 class="card-title">Jogger</h5>
                       <p class="card-text">Jogger Mujer Rosa Core Gris Fit Poly Htr</p>
-                      <a href="#" class="btn btn-primary">Comprar</a>
+                      <a href="<?php BASE_URL?>DetalleProducto" class="btn btn-primary">Comprar</a>
                     </div>
                   </div>
                 </div>
@@ -265,9 +265,8 @@
             </div>
           </form>
         </div>
+      <a href="<?php BASE_URL?>infoPago"><button class="w-50 text-white" style="background: rgb(247, 58, 58);border-radius: 20px;border: none;margin:20px 0px 10px 90px;">Pagar</button></a>
 
-      
-      <a href="info_pago.html"><button class="w-50 text-white" style="background: rgb(247, 58, 58);border-radius: 20px;border: none;margin:20px 0px 10px 90px;">Pagar</button></a>
 
       <div id="yape" class="w-100 mt-4" style="background:darkmagenta;">
         <a href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnRwbf6pJfTunLWCHd7l3Uwh0guzStdtFahA&s" style="width: 100%;height: 50px;display: flex;text-decoration: none;">
