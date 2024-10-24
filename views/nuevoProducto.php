@@ -4,7 +4,7 @@
         <form id= "frmRegistrar">
             <div class="mb-3">
                 <label for="codigo" class="form-label">Código</label>
-                <input type="text" class="form-control" id="codigo" name="codigo" maxlength="20" required>
+                <input type="text" class="form-control" id="codigo" name="codigo"  required>
             </div>
             <div class="mb-3">
                 <label for="nombre" class="form-label">Nombre</label>
@@ -41,5 +41,5 @@
             <button type="button" class="btn btn-success col-6 mx-2" onclick="registrarProducto();">Enviar</button>
         </form>
     </div>
-    <script src="<?php BASE_URL;?>views/js/functions_producto.js"></script>
+    <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
 

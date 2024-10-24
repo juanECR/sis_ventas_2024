@@ -9,23 +9,23 @@ async function registrarProducto(){
     let fechaVencimiento = document.querySelector('#fechaVencimiento').value;
     let imagen = document.querySelector('#imagen').value;
     let idProveedor = document.querySelector('#idProveedor').value;
+    
     if (codigo == "" || nombre == "" || detalle == ""|| precio == ""|| stock == ""|| idCategoria == ""|| fechaVencimiento == ""|| imagen == ""|| idProveedor == "") {
        alert("Error , campos vacios")  ;
        return;
     }
 try {
-    // capturamos datos del formulario registrarNuevoproducto.php
-    const datos = new FormData(frmRegistrar);
-    //enviar datos hacia el controlador
-    let respuesta = await fetch(base_url + 'controller/Producto.php?tipo=registrar',{
-        method : 'POST',
-        mode: 'cors',
-        cache : 'no-cache',
-        body: datos
-    });
-    console.log (respuesta);
+   // capturamos datos del formulario html(nuevo_producto.php)
+   const datos = new FormData(frmRegistrar);
+   // Enviar datos hacia el controlador
+   let respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
+       method: 'POST',
+       mode: 'cors',
+       cache: 'no-cache',
+       body: datos
+   });
+   console.log(respuesta);
 } catch (e) {
-    console.log('ups, Ocurrio un error' + e);
+    console.log("ups, Ocurrio un error" + e);
 }
 }
-

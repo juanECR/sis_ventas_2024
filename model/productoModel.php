@@ -1,5 +1,6 @@
 <?php
 require_once "../librerias/conexion.php";
+
 class ProductoModel{
 
     private $conexion;
@@ -12,6 +13,8 @@ class ProductoModel{
 
     public function registrarProducto($codigo,$nombre,$detalle,$precio,$stock,$idCategoria,$fechaVencimiento,$imagen,$idProveedor){
        $sql = $this->conexion->query("CALL RegistrarProducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$idCategoria}','{$fechaVencimiento}','{$imagen}','{$idProveedor}')");
+       $sql = $sql->fetch_assoc();
+       return $sql;
     }
 }
 ?>

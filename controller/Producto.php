@@ -5,7 +5,7 @@ $tipo = $_REQUEST['tipo'];
 $objProducto = new ProductoModel();
 
 if ($tipo == "registrar") {
-
+    print_r($_POST);
    // print_r($_POST);
     if ($_POST) {
         $codigo = $_POST('codigo');
@@ -21,9 +21,18 @@ if ($tipo == "registrar") {
             $arr_respuesta = array('status'=>false,'mensaje'=>'error,campos vacios');
         }else{
             $arrProducto = $objProducto->registrarProducto($codigo,$nombre,$detalle,$precio,$stock,$idCategoria,$fechaVencimiento,$imagen,$idProveedor);
-        }
+            if ($arrProducto->id>0) {
+                $arr_respuesta = array('status'=>true,'mensaje'=>'registro exitoso');
+            } else {
+                $arr_respuesta = array('status'=>false,'mensaje'=>'Fallo al registrar el producto');
+            }
+            echo json_encode($arr_respuesta);
+      }
 
     }
+}
+if ($tipo == "listar") {
+    # code...
 }
 
 ?>
