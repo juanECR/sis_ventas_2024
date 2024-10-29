@@ -7,6 +7,7 @@ class conexion{
 
          if (mysqli_connect_errno()) {
             echo "Error de conexion". mysqli_connect_errno();
+            return null; 
          }else{
             return $mysql;
          }

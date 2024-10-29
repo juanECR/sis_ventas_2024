@@ -24,7 +24,9 @@
             </div>
             <div class="mb-3">
                 <label for="idCategoria" class="form-label">ID Categoría</label>
-                <input type="number" class="form-control" id="idCategoria" name="idCategoria" required>
+                <select name="idCategoria" id="idCategoria" class="form-control" require>
+                    <option value="">seleccione</option>
+                </select>
             </div>
             <div class="mb-3">
                 <label for="fechaVencimiento" class="form-label">Fecha de Vencimiento</label>

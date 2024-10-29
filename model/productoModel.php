@@ -13,7 +13,7 @@ class ProductoModel{
 
     public function registrarProducto($codigo,$nombre,$detalle,$precio,$stock,$idCategoria,$fechaVencimiento,$imagen,$idProveedor){
        $sql = $this->conexion->query("CALL RegistrarProducto('{$codigo}','{$nombre}','{$detalle}','{$precio}','{$stock}','{$idCategoria}','{$fechaVencimiento}','{$imagen}','{$idProveedor}')");
-       $sql = $sql->fetch_assoc();
+       $sql = $sql->fetch_assoc('id');
        return $sql;
     }
 }
