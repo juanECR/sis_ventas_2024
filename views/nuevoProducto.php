@@ -23,9 +23,9 @@
                 <input type="number" class="form-control" id="stock" name="stock" min="0" max="99999" required>
             </div>
             <div class="mb-3">
-                <label for="idCategoria" class="form-label">ID Categoría</label>
-                <select name="idCategoria" id="idCategoria" class="form-control" require>
-                    <option value="">seleccione</option>
+                <label for="idCategoria" class="form-label">Categoría</label>
+                <select type="text" name="idCategoria" id="idCategoria" class="form-control" require>
+                    <option value="">seleccionar</option>
                 </select>
             </div>
             <div class="mb-3">
@@ -34,15 +34,19 @@
             </div>
             <div class="mb-3">
                 <label for="imagen" class="form-label">Imagen</label>
-                <input type="text" class="form-control" id="imagen" name="imagen" maxlength="20">
+                <input type="file" class="form-control" id="imagen" name="imagen" maxlength="20">
             </div>
             <div class="mb-3">
-                <label for="idProveedor" class="form-label">ID Proveedor</label>
-                <input type="number" class="form-control" id="idProveedor" name="idProveedor">
+                <label for="idProveedor" class="form-label">Proveedor</label>
+                <select type="text" name="idProveedor" id="idProveedor" class="form-control" require>
+                    <option value="">seleccionar</option>
+                </select>
             </div>
             <button type="button" class="btn btn-success col-6 mx-2" onclick="registrarProducto();">Enviar</button>
         </form>
     </div>
+
     <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
     <script>listar_categorias();</script>
+    <script>listar_proveedores();</script>
 

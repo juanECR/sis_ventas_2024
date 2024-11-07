@@ -16,5 +16,9 @@ class ProductoModel{
        $sql = $sql->fetch_assoc('id');
        return $sql;
     }
+    public function actualizar_imagen($id,$imagen){
+       $sql = $this->conexion->query("UPDATE producto SET imagen='{$imagen}' WHERE Id ='{$id}'");
+       return 1;
+    }
 }
 ?>

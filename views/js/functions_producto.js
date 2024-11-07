@@ -1,4 +1,5 @@
 
+
 async function registrarProducto(){
     let codigo = document.getElementById('codigo').value;
     let nombre = document.querySelector('#nombre').value;
@@ -31,6 +32,7 @@ try {
    }else{
       swal("Registro", json.mensaje,"error");
    }
+
    console.log(json);
 } catch (e) {
     console.log("ups, Ocurrio un error" + e);
@@ -44,23 +46,47 @@ try {
 async function listar_categorias() {
     try {
         let respuesta = await fetch(base_url+'controller/Categoria.php?tipo=listar');
-        let json = await respuesta.json();
+        json = await respuesta.json();
         if (json.status) {
             let datos = json.contenido;
+            let contenido_select = '<option value="">Seleccionar</option>';
             datos.forEach(element => {
-                $('#idCategoria').append($('<option/>'),{
-                  text: `${element.nombre}`,
-                  text: `${element.id}`,
-
-                });
+                contenido_select += '<option value="'+ element.Id +'">'+ element.Nombre+'</option>';
+             /* $('#idCategoria').append($('<option/>',{
+                  text: `${element.Nombre}`,
+                  value: `${element.Id}`,
+                }));    */
             });
+            document.getElementById('idCategoria').innerHTML = contenido_select;
         }
 
-        console.log(respuesta);
+
     } catch (e) {
         console.log("Error al cargar categoria" + e);
     }
 }
 
 
+//listar proveedores
+async function listar_proveedores() {
+    try {
+        let respuesta1 = await fetch(base_url+'controller/Proveedor.php?tipo=listar');
+        json = await respuesta1.json();
+        if (json.status) {
+            let datos1 = json.contenido;
+            let contenido_select1 = '<option value="">Seleccionar</option>';
+            datos1.forEach(element => {
+                contenido_select1 += '<option value="'+ element.Id +'">'+element.RazonSocial+'</option>';
+             /* $('#idCategoria').append($('<option/>',{
+                  text: `${element.Nombre}`,
+                  value: `${element.Id}`,
+                }));    */
+            });
+            document.getElementById('idProveedor').innerHTML = contenido_select1;
+        }
 
+ 
+    } catch (e) {
+        console.log("Error al cargar categoria" + e);
+    }
+}

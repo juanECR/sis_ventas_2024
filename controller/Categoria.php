@@ -14,7 +14,7 @@ if (!empty($arr_Categorias)) {
     for ($i=0; $i < count($arr_Categorias); $i++) { 
         $id_categoria = $arr_Categorias[$i]->Id;
         $categoria = $arr_Categorias[$i]->Nombre;
-        $opciones = '';
+        $opciones = '<a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
         $arr_Categorias[$i]->options = $opciones;
     }
     $arr_Respuesta['status'] = true;
