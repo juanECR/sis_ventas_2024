@@ -48,7 +48,7 @@ async function listar_categorias() {
         if (json.status) {
             let datos = json.contenido;
             datos.forEach(element => {
-                $('#categoria').append($('<option/>'),{
+                $('#idCategoria').append($('<option/>'),{
                   text: `${element.nombre}`,
                   text: `${element.id}`,
 
