@@ -1,5 +1,5 @@
 
-
+//REGISTRAR PRODUCTOS
 async function registrarProducto(){
     let codigo = document.getElementById('codigo').value;
     let nombre = document.querySelector('#nombre').value;
@@ -16,17 +16,17 @@ async function registrarProducto(){
        return;
     }
 try {
-   // capturamos datos del formulario html(nuevo_producto.php)
+   // capturamos datos del formulario html(nuevoproducto.php)
    const datos = new FormData(frmRegistrar);
    // Enviar datos hacia el controlador
-   let respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
+   let Respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
        method: 'POST',
        mode: 'cors',
        cache: 'no-cache',
        body: datos
    });
    // capturamos la respuesta par / convertido a la variable json
-   json = await respuesta.json();
+   json = await Respuesta.json();
    if (json.status) {
       swal("Registro", json.mensaje,"success");
    }else{
@@ -35,10 +35,9 @@ try {
 
    console.log(json);
 } catch (e) {
-    console.log("ups, Ocurrio un error" + e);
+    console.log("Oops, Ocurrio un error" + e);
 }
 }
-
 
 
 

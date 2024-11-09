@@ -10,11 +10,6 @@ if ($tipo == "registrar") {
    // print_r($_POST);
    // echo $_FILES['imagen']['name'];
 
-
-
-
-
-
   if ($_POST) {
         $codigo = $_POST['codigo'];
         $nombre = $_POST['nombre'];
@@ -27,13 +22,13 @@ if ($tipo == "registrar") {
         $idProveedor = $_POST['idProveedor'];
 
         if ($codigo == "" || $nombre == ""||$detalle = ""|| $precio ==""||$stock == ""|| $idCategoria == ""|| $fechaVencimiento = "" ||$imagen = "" || $idProveedor = ""){
-            $arr_respuesta = array('status'=>false,'mensaje'=>'error,campos vacios');
+            $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
         }else{
             $arrProducto = $objProducto->registrarProducto($codigo,$nombre,$detalle,$precio,$stock,$idCategoria,$fechaVencimiento,$imagen,$idProveedor);
-            if ($arrProducto->Id > 0) {
-                $arr_respuesta = array('status'=>true,'mensaje'=>'registro exitoso');
+            if ($arrProducto->id > 0) {
+                $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
                 //cargar archivos 
-                   $archivo = $_FILES['imagen']['tmp_name'];
+  /*                  $archivo = $_FILES['imagen']['tmp_name'];
                    $destino = './assets/img_productos/';
                    $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"],PATHINFO_EXTENSION));
                    $nombre = $arrProducto->id.".".$tipoArchivo;
@@ -41,18 +36,16 @@ if ($tipo == "registrar") {
                      $arr_imagen = $objProducto->actualizar_imagen($id,$nombre);
                    }else {
                     $arr_respuesta = array('status'=>true,'mensaje'=>'registro exitoso, error al subir imagen');
-                   }
+                   } */
 
             } else {
-                $arr_respuesta = array('status'=>false,'mensaje'=>'Fallo al registrar el producto');
+                $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error al registrar producto');
             }
-            echo json_encode($arr_respuesta);
+            echo json_encode($arr_Respuesta);
       }
 
     } 
 } 
-
-
 
 
 
