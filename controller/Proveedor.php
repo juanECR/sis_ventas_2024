@@ -14,7 +14,7 @@ if (!empty($arr_Proveedor)) {
     for ($i=0; $i < count($arr_Proveedor); $i++) { 
         $idProveedor = $arr_Proveedor[$i]->Id;
         $razon_social = $arr_Proveedor[$i]->RazonSocial;
-        $opciones = '<a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
+        $opciones = '';
         $arr_Proveedor[$i]->options = $opciones;
     }
     $arr_Respuesta['status'] = true;

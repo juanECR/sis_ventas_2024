@@ -37,7 +37,7 @@ try {
 } catch (e) {
     console.log("Oops, Ocurrio un error" + e);
 }
-}
+};
 
 
 
@@ -75,7 +75,7 @@ async function listar_proveedores() {
             let datos1 = json.contenido;
             let contenido_select1 = '<option value="">Seleccionar</option>';
             datos1.forEach(element => {
-                contenido_select1 += '<option value="'+ element.Id +'">'+element.RazonSocial+'</option>';
+                contenido_select1 += '<option value="'+element.Id+'">'+element.RazonSocial+'</option>';
              /* $('#idCategoria').append($('<option/>',{
                   text: `${element.Nombre}`,
                   value: `${element.Id}`,

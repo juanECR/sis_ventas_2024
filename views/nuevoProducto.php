@@ -1,7 +1,6 @@
-
-    <div class="container mt-5">
-        <h2 class="mb-4">Formulario de Producto</h2>
-        <form id= "frmRegistrar">
+    <div class="container-fluid p-0 " style="margin-top: 70px;">
+        <h2 class="mb-4 text-center">Registrar Producto</h2>
+        <form id= "frmRegistrar" class="w-25 m-auto">
             <div class="mb-3">
                 <label for="codigo" class="form-label">Código</label>
                 <input type="number" class="form-control" id="codigo" name="codigo"  required>
@@ -24,7 +23,7 @@
             </div>
             <div class="mb-3">
                 <label for="idCategoria" class="form-label">Categoría</label>
-                <select type="number" name="idCategoria" id="idCategoria" class="form-control" require>
+                <select type="number" name="idCategoria" id="idCategoria" class="form-control" required>
                     <option value="">seleccionar</option>
                 </select>
             </div>
@@ -36,10 +35,11 @@
                 <label for="imagen" class="form-label">Imagen</label>
                 <input type="file" class="form-control" id="imagen" name="imagen" maxlength="20">
             </div>
+            
             <div class="mb-3">
                 <label for="idProveedor" class="form-label">Proveedor</label>
-                <select type="number" name="idProveedor" id="idProveedor" class="form-control" require>
-                    <option value="">seleccionar</option>
+                <select name="idProveedor" id="idProveedor" class="form-control" required>
+                    <!--<option value="">seleccionar</option>-->
                 </select>
             </div>
             <button type="button" class="btn btn-success col-6 mx-2" onclick="registrarProducto();">Registrar</button>
@@ -49,4 +49,3 @@
     <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
     <script>listar_categorias();</script>
     <script>listar_proveedores();</script>
-

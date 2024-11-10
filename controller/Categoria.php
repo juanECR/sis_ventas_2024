@@ -1,7 +1,7 @@
 <?php
 require_once('../model/categoriaModel.php');
-$tipo = $_REQUEST['tipo'];
 
+$tipo = $_REQUEST['tipo'];
 //instanciar la categoria model
 $objCategoria = new categoriaModel();
 
@@ -22,5 +22,25 @@ if (!empty($arr_Categorias)) {
 }
 
     echo json_encode($arr_Respuesta);
+}
+
+if ($tipo == "registrar") {
+    if ($_POST) {
+        $nombre = $_POST['nombre'];
+        $detalle = $_POST['detalle'];
+
+        if ( $nombre == ""||$detalle = ""){
+            $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
+        }else{
+            $arrCategoria = $objCategoria->registrarCategoria($nombre,$detalle);
+            if ($arrCategoria->id > 0) {
+                $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
+            } else {
+                $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error al registrar categoria');
+            }
+            echo json_encode($arr_Respuesta);
+      }
+
+    } 
 }
 ?>

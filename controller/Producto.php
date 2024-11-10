@@ -1,5 +1,4 @@
 <?php
-
 require_once '../model/productoModel.php';
 $tipo = $_REQUEST['tipo'];
 //instancia la clase modelo del modelo registrarproducto
@@ -19,7 +18,7 @@ if ($tipo == "registrar") {
         $idCategoria = $_POST['idCategoria'];
         $fechaVencimiento = $_POST['fechaVencimiento'];
         $imagen = 'imagen';
-        $idProveedor = $_POST['idProveedor'];
+        $idProveedor = (int)$_POST['idProveedor'];
 
         if ($codigo == "" || $nombre == ""||$detalle = ""|| $precio ==""||$stock == ""|| $idCategoria == ""|| $fechaVencimiento = "" ||$imagen = "" || $idProveedor = ""){
             $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
