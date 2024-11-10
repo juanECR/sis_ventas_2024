@@ -25,7 +25,7 @@ if ($tipo == "registrar") {
             $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
         }else{
             $arrProducto = $objProducto->registrarProducto($codigo,$nombre,$detalle,$precio,$stock,$idCategoria,$fechaVencimiento,$imagen,$idProveedor);
-            if ($arrProducto->id > 0) {
+            if ($arrProducto->Id > 0) {
                 $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
                 //cargar archivos 
   /*                  $archivo = $_FILES['imagen']['tmp_name'];

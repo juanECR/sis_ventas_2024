@@ -12,8 +12,8 @@ if($tipo=="listar"){
 if (!empty($arr_Proveedor)) {
     //recordemos que el array es para agregar las opciones de las categorias
     for ($i=0; $i < count($arr_Proveedor); $i++) { 
-        $id_categoria = $arr_Proveedor[$i]->Id;
-        $categoria = $arr_Proveedor[$i]->RazonSocial;
+        $idProveedor = $arr_Proveedor[$i]->Id;
+        $razon_social = $arr_Proveedor[$i]->RazonSocial;
         $opciones = '<a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
         $arr_Proveedor[$i]->options = $opciones;
     }
