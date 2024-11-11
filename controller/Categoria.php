@@ -5,6 +5,8 @@ $tipo = $_REQUEST['tipo'];
 //instanciar la categoria model
 $objCategoria = new categoriaModel();
 
+
+//listar categorias
 if($tipo=="listar"){
     //respuesta
     $arr_Respuesta = array('status'=> false, 'contenido'=>'');
@@ -23,20 +25,20 @@ if (!empty($arr_Categorias)) {
 
     echo json_encode($arr_Respuesta);
 }
-
+//                registrar categorias
 if ($tipo == "registrar") {
     if ($_POST) {
-        $nombre = $_POST['nombre'];
-        $detalle = $_POST['detalle'];
+        $nombre=$_POST['nombre'];
+        $detalle=$_POST['detalle'];
 
-        if ( $nombre == ""||$detalle = ""){
-            $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
+        if ($nombre == ""||$detalle = ""){
+            $arr_Respuesta = array('status'=> false,'mensaje'=>'Error, campos vacios');
         }else{
             $arrCategoria = $objCategoria->registrarCategoria($nombre,$detalle);
-            if ($arrCategoria->id > 0) {
-                $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
+            if ($arrCategoria->id >= 1) {
+                $arr_Respuesta = array('status'=>true,'mensaje'=>'Registro exitoso');
             } else {
-                $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error al registrar categoria');
+                $arr_Respuesta = array('status'=>false, 'mensaje'=>'Error al registrar categoria');
             }
             echo json_encode($arr_Respuesta);
       }
