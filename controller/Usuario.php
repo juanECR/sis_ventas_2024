@@ -7,17 +7,17 @@ $objUsuario = new usuarioModel();
 if ($tipo == "registrar") {
    // print_r($_POST);
   if ($_POST) {
-  $Nro_identidad=$_POST('Nro_identidad');
-	$RazonSocial=$_POST('razon_social');
-	$Telefono=$_POST('telefono');
-	$Correo=$_POST('correo');
-	$Departamento=$_POST('departamento');
-	$Provincia=$_POST('provincia');
-	$Distrito=$_POST('distrito');
-	$CodPostal=$_POST('cod_postal');
-	$Direccion=$_POST('direccion');
-	$Rol =$_POST('rol');
-	$Clave =$_POST('clave');
+  $Nro_identidad=$_POST['Nro_identidad'];
+	$RazonSocial=$_POST['razon_social'];
+	$Telefono=$_POST['telefono'];
+	$Correo=$_POST['correo'];
+	$Departamento=$_POST['departamento'];
+	$Provincia=$_POST['provincia'];
+	$Distrito=$_POST['distrito'];
+	$CodPostal=$_POST['cod_postal'];
+	$Direccion=$_POST['direccion'];
+	$Rol =$_POST['rol'];
+	$Clave =$_POST['clave'];
   
 
         if ($Nro_identidad== "" ||$RazonSocial== "" || $Telefono	== ""|| $Correo	== ""|| $Departamento == ""||$Provincia== "" ||$Distrito== ""|| $CodPostal== ""|| $Direccion== ""||$Rol== "" || $Clave== "" ) {

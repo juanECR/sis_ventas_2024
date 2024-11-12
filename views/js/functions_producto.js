@@ -1,6 +1,7 @@
 
 //REGISTRAR PRODUCTOS
 async function registrarProducto(){
+
     let codigo = document.getElementById('codigo').value;
     let nombre = document.querySelector('#nombre').value;
     let detalle = document.querySelector('#detalle').value;
@@ -9,7 +10,7 @@ async function registrarProducto(){
     let idCategoria = document.querySelector('#idCategoria').value;
     let fechaVencimiento = document.querySelector('#fechaVencimiento').value;
     let imagen = document.querySelector('#imagen').value;
-    let idProveedor = document.querySelector('#idProveedor').value;
+    let idProveedor =document.querySelector('#idProveedor').value;
     
     if (codigo == "" || nombre == "" || detalle == ""|| precio == ""|| stock == ""|| idCategoria == ""|| fechaVencimiento == ""|| imagen == ""|| idProveedor == "") {
        alert("Error , campos vacios")  ;
@@ -17,28 +18,26 @@ async function registrarProducto(){
     }
 try {
    // capturamos datos del formulario html(nuevoproducto.php)
-   const datos = new FormData(frmRegistrar);
+   const datos = new FormData(formProducto);
    // Enviar datos hacia el controlador
-   let Respuesta = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
+   let Respuesta2 = await fetch(base_url+'controller/Producto.php?tipo=registrar',{
        method: 'POST',
        mode: 'cors',
        cache: 'no-cache',
        body: datos
    });
    // capturamos la respuesta par / convertido a la variable json
-   json = await Respuesta.json();
+   json = await Respuesta2.json();
    if (json.status) {
       swal("Registro", json.mensaje,"success");
    }else{
       swal("Registro", json.mensaje,"error");
    }
-
    console.log(json);
 } catch (e) {
     console.log("Oops, Ocurrio un error" + e);
 }
-};
-
+}
 
 
 //listar categorias
@@ -75,7 +74,7 @@ async function listar_proveedores() {
             let datos1 = json.contenido;
             let contenido_select1 = '<option value="">Seleccionar</option>';
             datos1.forEach(element => {
-                contenido_select1 += '<option value="'+element.Id+'">'+element.RazonSocial+'</option>';
+                contenido_select1 += '<option value="'+ element.Id +'">'+ element.RazonSocial+'</option>';
              /* $('#idCategoria').append($('<option/>',{
                   text: `${element.Nombre}`,
                   value: `${element.Id}`,
@@ -89,3 +88,6 @@ async function listar_proveedores() {
         console.log("Error al cargar categoria" + e);
     }
 }
+
+
+

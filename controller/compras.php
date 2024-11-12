@@ -12,7 +12,7 @@ if ($tipo == "registrar") {
     $cantidad = $_POST['cantidad'];
     $precio = $_POST['precio'];
 
-        if ($idProducto == "" || $idtrabajador == ""||$cantidad = ""|| $precio ==""){
+        if ($idProducto == "" || $idtrabajador == ""||$cantidad == ""|| $precio ==""){
             $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
         }else{
             $arrCompra = $objCompra->registrarCompra($idProducto,$idtrabajador,$cantidad,$precio);

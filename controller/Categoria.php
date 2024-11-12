@@ -31,7 +31,7 @@ if ($tipo == "registrar") {
         $nombre=$_POST['nombre'];
         $detalle=$_POST['detalle'];
 
-        if ($nombre == ""||$detalle = ""){
+        if ($nombre == ""||$detalle == ""){
             $arr_Respuesta = array('status'=> false,'mensaje'=>'Error, campos vacios');
         }else{
             $arrCategoria = $objCategoria->registrarCategoria($nombre,$detalle);

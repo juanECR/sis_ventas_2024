@@ -17,13 +17,13 @@ class usuarioModel{
      }
      //listar proveedores
      public function obtener_proveedores(){
-        $arrRespuesta = array();
-        $respuesta = $this->conexion->query("SELECT * FROM usuario WHERE Rol = 'proveedor'");
+        $arrRespuestaa = array();
+        $respuestaa = $this->conexion->query("SELECT * FROM usuario WHERE Rol = 'proveedor'");
 
-        while ($objeto = $respuesta->fetch_object()) {
-            array_push($arrRespuesta,$objeto);
+        while ($objeto = $respuestaa->fetch_object()) {
+            array_push($arrRespuestaa,$objeto);
         }
-        return $arrRespuesta;
+        return $arrRespuestaa;
     }
     //listar trabajaadores
     public function obtener_trabajadores(){
