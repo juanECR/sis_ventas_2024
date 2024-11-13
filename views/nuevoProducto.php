@@ -1,41 +1,100 @@
-    <div class="container-fluid p-0 " style="margin-top: 70px;">
-        <h2 class="mb-4 text-center">Registrar Producto</h2>
-        <form id= "formProducto" class="w-25 m-auto">
+  <div class="container py-5" style="margin-top: 70px;">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card shadow-lg border-0">
+                <div class="card-body p-5">
+                    <!-- Header con icono -->
+                    <div class="text-center mb-4">
+                        <i class="bi bi-box-seam display-4 text-primary mb-3"></i>
+                        <h2 class="card-title fw-bold">Registrar Producto</h2>
+                        <p class="text-muted">Complete los detalles del nuevo producto</p>
+                    </div>
 
-                <label for="codigo" class="form-label">Código</label>
-                <input type="text" class="form-control" id="codigo" name="codigo"  required>
+                    <form id="formProducto">
+                        <div class="row g-4">
+                            <!-- Código y Nombre -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="codigo" name="codigo" required>
+                                    <label for="codigo">Código</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nombre" name="nombre" maxlength="30" required>
+                                    <label for="nombre">Nombre</label>
+                                </div>
+                            </div>
 
-                <label for="nombre" class="form-label">Nombre</label>
-                <input type="text" class="form-control" id="nombre" name="nombre" maxlength="30" required>
+                            <!-- Detalle -->
+                            <div class="col-12">
+                                <div class="form-floating">
+                                    <textarea class="form-control" id="detalle" name="detalle" maxlength="100" style="height: 100px"></textarea>
+                                    <label for="detalle">Detalle</label>
+                                </div>
+                            </div>
 
-                <label for="detalle" class="form-label">Detalle</label>
-                <textarea class="form-control" id="detalle" name="detalle" maxlength="100" rows="3"></textarea>
+                            <!-- Precio y Stock -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+                                    <label for="precio">Precio</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="number" class="form-control" id="stock" name="stock" min="0" max="99999" required>
+                                    <label for="stock">Stock</label>
+                                </div>
+                            </div>
 
-                <label for="precio" class="form-label">Precio</label>
-                <input type="number" class="form-control" id="precio" name="precio" step="0.01" required>
+                            <!-- Categoría y Proveedor -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" name="idCategoria" id="idCategoria" required>
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                    <label for="idCategoria">Categoría</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <select class="form-select" name="idProveedor" id="idProveedor" required>
+                                        <option value="">Seleccionar</option>
+                                    </select>
+                                    <label for="idProveedor">Proveedor</label>
+                                </div>
+                            </div>
 
-                <label for="stock" class="form-label">Stock</label>
-                <input type="number" class="form-control" id="stock" name="stock" min="0" max="99999" required>
+                            <!-- Fecha de Vencimiento -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="date" class="form-control" id="fechaVencimiento" name="fechaVencimiento">
+                                    <label for="fechaVencimiento">Fecha de Vencimiento</label>
+                                </div>
+                            </div>
 
-                <label for="idCategoria" class="form-label">Categoría</label>
-                <select type="number" name="idCategoria" id="idCategoria" class="form-control" required>
-                    <option value="">seleccionar</option>
-                </select>
+                            <!-- Imagen -->
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="file" class="form-control" id="imagen" name="imagen" maxlength="20">
+                                    <label for="imagen">Imagen</label>
+                                </div>
+                            </div>
 
-                <label for="fechaVencimiento" class="form-label">Fecha de Vencimiento</label>
-                <input type="date" class="form-control" id="fechaVencimiento" name="fechaVencimiento">
-
-                <label for="imagen" class="form-label">Imagen</label>
-                <input type="file" class="form-control" id="imagen" name="imagen" maxlength="20">
-
-                <label for="idProveedor" class="form-label">Proveedor</label>
-                <select name="idProveedor" id="idProveedor" class="form-control" required>
-                    <option value="">seleccionar</option>
-                    
-                </select>
-            <button type="button" class="btn btn-success col-6 mx-2" onclick="registrarProducto();">Registrar</button>
-        </form>
+                            <!-- Botón de registro -->
+                            <div class="col-12 text-center mt-4">
+                                <button type="button" class="btn btn-primary btn-lg px-5" onclick="registrarProducto();">
+                                    <i class="bi bi-check2-circle me-2"></i>Registrar Producto
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
     </div>
+</div>
 
     <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
     <script>listar_categorias();</script>

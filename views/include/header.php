@@ -25,11 +25,11 @@
             <li class="nav-item" >
               <a class="nav-link active text-white" aria-current="page" href="<?php BASE_URL?>inicio">Inicio</a>
             </li>
-            <li class="nav-item"style="box-shadow: 0px 2px 0px 0px white;">
+            <li class="nav-item">
               <a class="nav-link text-white" href="<?php BASE_URL?>producto">Productos</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown-menu" aria-expanded="false">
                 Categorias
               </a>
               <ul class="dropdown-menu">
