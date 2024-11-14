@@ -3,28 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <title> Login</title>
+  <script> const base_url= "<?php echo BASE_URL;?>";</script>
 </head>
 <body>
 <div class="login-box">
   <h2>Iniciar sesion</h2>
-  <form action="<?php BASE_URL?>inicio">
+  <form  id="frm_login">
     <div class="user-box">
-      <input type="text" name="" required="">
+      <input type="text" name="usuario" id="usuario" required>
       <label>Usuario</label>
     </div>
     <div class="user-box">
-      <input type="password" name="" required="">
+      <input type="password" name="password" id="password" required>
       <label>Contraseña</label>
     </div>
-    <a href="<?php BASE_URL?>inicio">
+
+    <button type="submit" href="<?php BASE_URL?>inicio">
       <span></span>
       <span></span>
       <span></span>
       <span></span>
       Iniciar sesion
-    </a>
+</button>
   </form>
 </div>
+<script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
 
 <style>
 html {
@@ -91,7 +94,7 @@ body {
   font-size: 12px;
 }
 
-.login-box form a {
+.login-box form button {
   position: relative;
   display: inline-block;
   padding: 10px 20px;
@@ -102,10 +105,13 @@ body {
   overflow: hidden;
   transition: .5s;
   margin-top: 40px;
-  letter-spacing: 4px
+  letter-spacing: 4px;
+  background: black;
+  border: none;
+  border-radius: 5px;
 }
 
-.login-box a:hover {
+.login-box button:hover {
   background: #03e9f4;
   color: #fff;
   border-radius: 5px;
@@ -115,12 +121,12 @@ body {
               0 0 100px #03e9f4;
 }
 
-.login-box a span {
+.login-box button span {
   position: absolute;
   display: block;
 }
 
-.login-box a span:nth-child(1) {
+.login-box button span:nth-child(1) {
   top: 0;
   left: -100%;
   width: 100%;
@@ -138,7 +144,7 @@ body {
   }
 }
 
-.login-box a span:nth-child(2) {
+.login-box button span:nth-child(2) {
   top: -100%;
   right: 0;
   width: 2px;
@@ -157,7 +163,7 @@ body {
   }
 }
 
-.login-box a span:nth-child(3) {
+.login-box button span:nth-child(3) {
   bottom: 0;
   right: -100%;
   width: 100%;
@@ -176,7 +182,7 @@ body {
   }
 }
 
-.login-box a span:nth-child(4) {
+.login-box button span:nth-child(4) {
   bottom: -100%;
   left: 0;
   width: 2px;

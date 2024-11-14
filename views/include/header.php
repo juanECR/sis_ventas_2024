@@ -55,6 +55,7 @@
             <button class="btn btn-outline-light" type="submit">Search</button>
           </form>
           <a class="m-2" href="<?php BASE_URL?>panelAdministrador"><i class="fa fa-bars-progress" style="color:#ffffff;" ></i></a>
+          <a class="m-2" onclick="cerrar_sesion();"><i class="fa fa-bars-progress" style="color:#ffffff;" ></i></a>
 
         </div>
       </div>

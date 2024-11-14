@@ -10,8 +10,8 @@ async function registrarUsuario(){
 	let CodPostal	   = document.querySelector('#cod_postal').value;
 	let Direccion	   = document.querySelector('#direccion').value;
 	let Rol	           = document.querySelector('#rol').value;
-	let Clave	       = document.querySelector('#clave').value;
-    if ( Nro_identidad== "" ||RazonSocial== "" || Telefono	== ""|| Correo	== ""|| Departamento == ""||Provincia== "" ||Distrito== ""|| CodPostal== ""|| Direccion== ""||Rol== "" || Clave== "" ) {
+	/* let Clave	       = document.querySelector('#clave').value; */
+    if ( Nro_identidad== "" ||RazonSocial== "" || Telefono	== ""|| Correo	== ""|| Departamento == ""||Provincia== "" ||Distrito== ""|| CodPostal== ""|| Direccion== ""||Rol== "" /* || Clave== "" */ ) {
        alert("Error , campos vacios")  ;
        return;
     }

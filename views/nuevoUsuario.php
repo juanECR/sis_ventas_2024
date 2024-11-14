@@ -114,13 +114,13 @@
                                                 </select>
                                             </div>
                                         </div>
-                                        <div class="col-md-6 mb-3">
+ <!--                                        <div class="col-md-6 mb-3">
                                             <label for="clave" class="form-label">Contraseña</label>
                                             <div class="input-group">
                                                 <span class="input-group-text"><i class="fas fa-key"></i></span>
                                                 <input type="password" class="form-control" name="clave" id="clave" required>
                                             </div>
-                                        </div>
+                                        </div> -->
                                     </div>
                                 </div>
                             </div>

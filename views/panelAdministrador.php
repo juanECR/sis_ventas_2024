@@ -4,7 +4,7 @@
         <!-- Advanced Panel -->
          <h1 class="text-center mt-5">Panel de administracion</h1>
         <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 dis-pe">
                 <div class="card-header">Usuario</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>nuevoUsuario"><div class="icon-wrapper"><i class="fa fa-user-plus"></i> Registrar Usuario</div></a>
@@ -16,7 +16,7 @@
 
         <!-- Database Management Panel -->
         <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 dis-pe">
                 <div class="card-header">Proveedores</div>
                 <div class="card-body">
                     <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Provedores</div></a>
@@ -27,7 +27,7 @@
 
         <!-- Domain Management Panel -->
         <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 dis-pe">
                 <div class="card-header">Trabajadores</div>
                 <div class="card-body">
                     <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Trabajadores</div></a>
@@ -38,7 +38,7 @@
 
         <!-- Mail Panel -->
         <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 dis-pe">
                 <div class="card-header">Productos</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>nuevoProducto"><div class="icon-wrapper"><i class="fa fa-user-plus"></i> Registrar Producto</div></a>
@@ -50,7 +50,7 @@
 
         <!-- Reseller Panel -->
         <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 dis-pe">
                 <div class="card-header">Categorias</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>nuevaCategoria"><div class="icon-wrapper"><i class="fa fa-user-plus"></i>Registrar Categoria</div></a>
@@ -62,7 +62,7 @@
 
         <!-- File Management Panel -->
         <div class="col-md-4">
-            <div class="card mb-3">
+            <div class="card mb-3 dis-pe">
                 <div class="card-header">Compras</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>registrarCompras"><div class="icon-wrapper"><i class="fa fa-user-plus"></i>Registrar Compra</div></a>
@@ -79,6 +79,9 @@
             background-color: #333;
             color: #fff;
             font-weight: bold;
+        }
+        .dis-pe:hover > .card-header{
+            background: #3371ff;
         }
         a{
             text-decoration: none;

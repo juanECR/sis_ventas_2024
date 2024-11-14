@@ -17,13 +17,13 @@ if ($tipo == "registrar") {
 	$CodPostal=$_POST['cod_postal'];
 	$Direccion=$_POST['direccion'];
 	$Rol =$_POST['rol'];
-	$Clave =$_POST['clave'];
-  
+	/* $Clave = password_hash($_POST['clave'],PASSWORD_DEFAULT); */
+  $secure_password = password_hash($Nro_identidad,PASSWORD_DEFAULT);
 
-        if ($Nro_identidad== "" ||$RazonSocial== "" || $Telefono	== ""|| $Correo	== ""|| $Departamento == ""||$Provincia== "" ||$Distrito== ""|| $CodPostal== ""|| $Direccion== ""||$Rol== "" || $Clave== "" ) {
+        if ($Nro_identidad== "" ||$RazonSocial== "" || $Telefono	== ""|| $Correo	== ""|| $Departamento == ""||$Provincia== "" ||$Distrito== ""|| $CodPostal== ""|| $Direccion== ""||$Rol== "" || $secure_password== "" ) {
           $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
         }else{
-            $arrUsuario = $objUsuario->registrarUsuario($Nro_identidad,$RazonSocial,$Telefono,$Correo,$Departamento,$Provincia,$Distrito,$CodPostal, $Direccion,$Rol, $Clave);
+            $arrUsuario = $objUsuario->registrarUsuario($Nro_identidad,$RazonSocial,$Telefono,$Correo,$Departamento,$Provincia,$Distrito,$CodPostal, $Direccion,$Rol, $secure_password);
             if ($arrUsuario->id > 0) {
                 $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
             } else {

@@ -35,6 +35,14 @@ class usuarioModel{
         }
         return $arrRespuesta1;
     }
+    public function buscarPersonaporDni($dni){
+        $arrRespuesta2 = array();
+        $respuesta2 = $this->conexion->query("SELECT * FROM usuario WHERE Nro_identidad ='{$dni}'");
+        while ($objeto2 = $respuesta2->fetch_object()) {
+            array_push($arrRespuesta2,$objeto2);
+        }
+        return $arrRespuesta2;
+    }
     
 }
 ?>
