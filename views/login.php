@@ -17,8 +17,7 @@
       <input type="password" name="password" id="password" required>
       <label>Contraseña</label>
     </div>
-
-    <button type="submit" href="<?php BASE_URL?>inicio">
+    <button type="submit">
       <span></span>
       <span></span>
       <span></span>
@@ -27,7 +26,7 @@
 </button>
   </form>
 </div>
-<script src="<?php echo BASE_URL;?>views/js/functions_login.js"></script>
+ <script src=" <?php echo BASE_URL;?>views/js/functions_login.js"></script> 
 
 <style>
 html {

@@ -19,7 +19,6 @@ class usuarioModel{
      public function obtener_proveedores(){
         $arrRespuestaa = array();
         $respuestaa = $this->conexion->query("SELECT * FROM usuario WHERE Rol = 'proveedor'");
-
         while ($objeto = $respuestaa->fetch_object()) {
             array_push($arrRespuestaa,$objeto);
         }
@@ -35,13 +34,11 @@ class usuarioModel{
         }
         return $arrRespuesta1;
     }
+    //validar usuarios login
     public function buscarPersonaporDni($dni){
-        $arrRespuesta2 = array();
-        $respuesta2 = $this->conexion->query("SELECT * FROM usuario WHERE Nro_identidad ='{$dni}'");
-        while ($objeto2 = $respuesta2->fetch_object()) {
-            array_push($arrRespuesta2,$objeto2);
-        }
-        return $arrRespuesta2;
+        $sql = $this->conexion->query("SELECT * FROM usuario WHERE Nro_identidad ='{$dni}'");
+        $sql = $sql->fetch_object();
+        return $sql;
     }
     
 }

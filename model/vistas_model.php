@@ -1,7 +1,5 @@
 <?php
-
 session_start();
-
 
 class VistaModelo{
     protected static function obtener_vista($vistas){

@@ -20,9 +20,9 @@ async function iniciar_sesion() {
         json = await Respuesta2.json();
         if (json.status) {
            /* swal("iniciar secion", json.mensaje,"success"); */
-           location.replace(base_url+"inicio");
+           location.replace(base_url+'inicio');
         }else{
-           swal("iniciar secion", json.mensaje,"error");
+           swal("iniciar secion", json.mensaje,'error');
         }
         console.log(json);
      } catch (e) {

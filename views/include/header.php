@@ -54,8 +54,8 @@
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
             <button class="btn btn-outline-light" type="submit">Search</button>
           </form>
-          <a class="m-2" href="<?php BASE_URL?>panelAdministrador"><i class="fa fa-bars-progress" style="color:#ffffff;" ></i></a>
-          <a class="m-2" onclick="cerrar_sesion();"><i class="fa fa-bars-progress" style="color:#ffffff;" ></i></a>
+          <a class="m-2" href="<?php BASE_URL?>panelAdministrador"><i class="fa fa-bars" style="color:#ffffff;" ></i></a>
+          <a class="m-2" onclick="cerrar_sesion();"><i class="fa fa-arrow-right-to-bracket" style="color:#ffffff;" ></i></a>
 
         </div>
       </div>
