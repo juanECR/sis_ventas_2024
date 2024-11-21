@@ -15,6 +15,13 @@ class usuarioModel{
         $sql = $sql->fetch_object();
         return $sql;
      }
+     //listar personas
+     public function obtener_usuario_id($id){
+        $sql = $this->conexion->query("SELECT * FROM usuario WHERE Id ='{$id}'");
+        $sqle = $sql->fetch_object();
+        return $sqle;
+    }
+
      //listar proveedores
      public function obtener_proveedores(){
         $arrRespuestaa = array();
@@ -24,6 +31,7 @@ class usuarioModel{
         }
         return $arrRespuestaa;
     }
+
     //listar trabajaadores
     public function obtener_trabajadores(){
         $arrRespuesta1 = array();
@@ -34,6 +42,7 @@ class usuarioModel{
         }
         return $arrRespuesta1;
     }
+
     //validar usuarios login
     public function buscarPersonaporDni($dni){
         $sql = $this->conexion->query("SELECT * FROM usuario WHERE Nro_identidad ='{$dni}'");

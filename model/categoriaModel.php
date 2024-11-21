@@ -18,6 +18,13 @@ class categoriaModel{
         }
         return $arrRespuesta;
     }
+    //obtener categoiria id / Productos.php
+    public function obtener_categoria_id($id){
+        $sql = $this->conexion->query("SELECT * FROM categoria WHERE Id ='{$id}'");
+        $sql1 = $sql->fetch_object();
+        return $sql1;
+    }
+
     public function registrarCategoria($nombre,$detalle){
         $sql = $this->conexion->query("CALL RegistrarCategoria('{$nombre}','{$detalle}')");
         $sql = $sql->fetch_object();
