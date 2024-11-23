@@ -8,7 +8,7 @@
                 <div class="card-header">Usuario</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>nuevoUsuario"><div class="icon-wrapper"><i class="fa fa-user-plus"></i> Registrar Usuario</div></a>
-                    <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver usuarios</div></a>
+                    <a href="<?php BASE_URL;?>usuarios"><div class="icon-wrapper"><i class="fas fa-users"></i> Ver usuarios</div></a>
                     <a href=""><div class="icon-wrapper"><i class="fas fa-question-circle"></i> FAQs</div></a>
                 </div>
             </div>
@@ -42,7 +42,7 @@
                 <div class="card-header">Productos</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>nuevoProducto"><div class="icon-wrapper"><i class="fa fa-user-plus"></i> Registrar Producto</div></a>
-                    <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Productos</div></a>
+                    <a href="<?php BASE_URL;?>Productos"><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Productos</div></a>
                     <a href=""><div class="icon-wrapper"><i class="fas fa-question-circle"></i> FAQs</div></a>
                 </div>
             </div>

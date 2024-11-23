@@ -9,13 +9,24 @@ class usuarioModel{
         $this->conexion = new Conexion();
         $this-> conexion = $this->conexion->connect();
     }
+    //LISTAR TODOS LOS USUARIOS--TABLA USUARIOS
+    public function obtener_usuarios(){
+        $arrRespuesta1 = array();
+        $respuesta1 = $this->conexion->query("SELECT * FROM usuario");
 
+        while ($objeto = $respuesta1->fetch_object()) {
+            array_push($arrRespuesta1,$objeto);
+        }
+        return $arrRespuesta1;
+    }
+
+    //REGISTRAR USUARIOS
     public function registrarUsuario($Nro_identidad, $RazonSocial, $Telefono, $Correo, $Departamento, $Provincia, $Distrito, $CodPostal, $Direccion,$Rol,$Clave){
         $sql = $this->conexion->query("CALL RegistrarUsuario('{$Nro_identidad}','{$RazonSocial}','{$Telefono}','{$Correo}','{$Departamento}','{$Provincia}','{$Distrito}','{$CodPostal}','{$Direccion}','{$Rol}','{$Clave}')");
         $sql = $sql->fetch_object();
         return $sql;
      }
-     //listar personas
+     //OBTENER PERSONAS POR ID
      public function obtener_usuario_id($id){
         $sql = $this->conexion->query("SELECT * FROM usuario WHERE Id ='{$id}'");
         $sqle = $sql->fetch_object();

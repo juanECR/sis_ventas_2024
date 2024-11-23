@@ -5,7 +5,7 @@ async function listar_productos(){
         let json = await respuesta.json();
         if (json.status) {
             let datos = json.contenido;
-            let cont = 1;
+            let cont = 0;
      /*        let contenido_select = '<tbody> <tr><td>nombre</td><td>apelldio</td></tr></tbody>'; */
             datos.forEach(item => {
                 let nuevaFila =  document.createElement("tr");

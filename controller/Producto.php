@@ -32,7 +32,7 @@ if ($tipo == "listar") {
                     $idProveedor        = $arr_Producto[$i]->IdProveedor;
                     $res_proveedor      = $objUsuario->obtener_usuario_id($idProveedor);
                     $arr_Producto[$i]->proveedor = $res_proveedor;
-                    $opciones = ' <a href="nuevoUsuario"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
+                    $opciones = ' <a href="nuevoProducto"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
                     <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>';
                     $arr_Producto[$i]->options = $opciones;
         }
