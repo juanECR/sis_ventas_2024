@@ -10,8 +10,13 @@ class ProductoModel{
         $this->conexion = new conexion();
         $this->conexion = $this->conexion->connect();
     }
-
-
+    //obtener producto id
+    public function Obtener_Producto_Id($id) {
+        $sqli = $this->conexion->query("SELECT * FROM producto WHERE Id = '{$id}'");
+        $sql1 = $sqli->fetch_object();
+        return $sql1;
+    }
+    //registrar producto
     public function insertarProducto($icodigo, $inombre, $idetalle, $iprecio, $istock, $iidCategoria, $ifechaVencimiento, $iimagen, $iidProveedor) {
         $sql = $this->conexion->query("CALL RegistrarProducto('{$icodigo}','{$inombre}','{$idetalle}','{$iprecio}','{$istock}','{$iidCategoria}','{$ifechaVencimiento}','{$iimagen}','{$iidProveedor}')");
         $sql = $sql->fetch_object();

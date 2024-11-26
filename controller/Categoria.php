@@ -16,7 +16,9 @@ if (!empty($arr_Categorias)) {
     for ($i=0; $i < count($arr_Categorias); $i++) { 
         $id_categoria = $arr_Categorias[$i]->Id;
         $categoria = $arr_Categorias[$i]->Nombre;
-        $opciones = '<a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>';
+        $detalle = $arr_Categorias[$i]->Detalle;
+        $opciones = '<a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>';
         $arr_Categorias[$i]->options = $opciones;
     }
     $arr_Respuesta['status'] = true;
@@ -25,6 +27,8 @@ if (!empty($arr_Categorias)) {
 
     echo json_encode($arr_Respuesta);
 }
+
+
 //                registrar categorias
 if ($tipo == "registrar") {
     if ($_POST) {

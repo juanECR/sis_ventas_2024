@@ -54,7 +54,7 @@
                 <div class="card-header">Categorias</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>nuevaCategoria"><div class="icon-wrapper"><i class="fa fa-user-plus"></i>Registrar Categoria</div></a>
-                    <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Categorias</div></a>
+                    <a href="<?php BASE_URL;?>categorias"><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Categorias</div></a>
                     <a href=""><div class="icon-wrapper"><i class="fas fa-question-circle"></i> FAQs</div></a>
                 </div>
             </div>
@@ -66,7 +66,7 @@
                 <div class="card-header">Compras</div>
                 <div class="card-body">
                     <a href="<?php BASE_URL;?>registrarCompras"><div class="icon-wrapper"><i class="fa fa-user-plus"></i>Registrar Compra</div></a>
-                    <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Compras</div></a>
+                    <a href="<?php BASE_URL;?>compras"><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Compras</div></a>
                     <a href=""><div class="icon-wrapper"><i class="fas fa-question-circle"></i> FAQs</div></a>
                 </div>
             </div>
