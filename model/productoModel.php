@@ -34,5 +34,12 @@ class ProductoModel{
             return $arrRespuesta;
         }
 
+        //ver producto id
+        public function ver_producto($id){
+            $sql = $this->conexion->query("SELECT * FROM producto WHERE Id = '{$id}'");
+            $sql = $sql->fetch_object();
+            return $sql;
+        }
+
 }
 ?>

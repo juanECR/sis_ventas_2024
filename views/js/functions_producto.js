@@ -31,14 +31,42 @@ async function listar_productos(){
         console.log("OOps salio un error" + e);
     }
 }
-
-
-
-
-
-
 if (document.querySelector('#tabla_productos')) {
     listar_productos();
+}
+
+
+//VER PRODUCTO POR ID PARA EDITAR
+async function ver_producto(id) {
+    const formData = new FormData();
+    formData.append('id_producto' , id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=ver',{
+            method : 'POST',
+            mode: 'cors',
+            cache:'no-cache',
+            datos: formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            document.querySelector('#codigo').value = json.contenido.Codigo;
+            document.querySelector('#nombre').value = json.contenido.Nombre;
+            document.querySelector('#detalle').value = json.contenido.Detalle;
+            document.querySelector('#precio').value = json.contenido.Precio;
+            document.querySelector('#idCategoria').value = json.contenido.IdCategoria;
+            document.querySelector('#idProveedor').value = json.contenido.IdProveedor;
+            document.querySelector('#fechaVencimiento').value = json.contenido.FechaVencimiento;
+
+
+        }else{
+            window.location(base_url+"Productos");
+        }
+
+
+        console.log(json);
+    } catch (e) {
+        console.log("Oops ocurrio un error" + e);
+    }
 }
 
 
