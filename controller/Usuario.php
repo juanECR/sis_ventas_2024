@@ -97,10 +97,24 @@ if($tipo=="listarProveedores"){
 if (!empty($arr_Proveedor)) {
   //recordemos que el array es para agregar las opciones de las categorias
   for ($i=0; $i < count($arr_Proveedor); $i++) { 
-      $idProveedor = $arr_Proveedor[$i]->Id;
-      $razon_social = $arr_Proveedor[$i]->RazonSocial;
-      $opciones = '';
-      $arr_Proveedor[$i]->options = $opciones;
+    $Id              = $arr_Proveedor[$i]->Id;
+    $Nro_identidad    = $arr_Proveedor[$i]->Nro_identidad;
+    $RazonSocial          = $arr_Proveedor[$i]->RazonSocial;
+    $Telefono         = $arr_Proveedor[$i]->Telefono;
+    $Correo           = $arr_Proveedor[$i]->Correo;
+    $Departamento     = $arr_Proveedor[$i]->Departamento;
+    $Provincia        = $arr_Proveedor[$i]->Provincia;
+    $Distrito            = $arr_Proveedor[$i]->Distrito;
+    $CodPostal        = $arr_Proveedor[$i]->CodPostal;
+    $Direccion            = $arr_Proveedor[$i]->Direccion;
+    $Rol               = $arr_Proveedor[$i]->Rol;
+    $Clave               = $arr_Proveedor[$i]->Clave;
+    $Estado            = $arr_Proveedor[$i]->Estado; 
+    $Estado == 1 ? $arr_Proveedor[$i]->Estado = '<p class="btn btn-success">activo</p>':$arr_Proveedor[$i]->Estado = '<p class="btn btn-danger">inactivo</p>';   // validacion usuario  
+    $FechaRegistro        = $arr_Proveedor[$i]->FechaRegistro;
+    $opciones = ' <a href="nuevoUsuario"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
+    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>';
+    $arr_Proveedor[$i]->options = $opciones;
   }
   $arr_Respuesta['status'] = true;
   $arr_Respuesta['contenido'] = $arr_Proveedor;

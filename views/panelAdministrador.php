@@ -19,7 +19,7 @@
             <div class="card mb-3 dis-pe">
                 <div class="card-header">Proveedores</div>
                 <div class="card-body">
-                    <a href=""><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Provedores</div></a>
+                    <a href="<?php BASE_URL;?>usuarios#tabla_proveedores"><div class="icon-wrapper"><i class="fas fa-users"></i> Ver Provedores</div></a>
                     <a href=""><div class="icon-wrapper"><i class="fas fa-question-circle"></i> FAQs</div></a>
                 </div>
             </div>
