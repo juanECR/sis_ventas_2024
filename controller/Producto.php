@@ -94,6 +94,8 @@ if ($tipo == 'ver') {
     /* print_r($_POST); */
     $id_producto = $_POST['id_producto'];
     $arr_Respuesta = $objProducto->ver_producto($id_producto);
+ /*    $res_proveedor      = $objUsuario->obtener_usuario_id($arr_Respuesta->IdProveedor);
+    $arr_Respuesta->IdProveedor = $res_proveedor->RazonSocial ; */
    /*  print_r($arr_Respuesta); */
    if (empty($arr_Respuesta)) {
       $response = array('status' => false, 'mensaje'=> "error, no informacio");

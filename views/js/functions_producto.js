@@ -45,7 +45,7 @@ async function ver_producto(id) {
             method : 'POST',
             mode: 'cors',
             cache:'no-cache',
-            datos: formData
+            body: formData
         });
         json = await respuesta.json();
         if (json.status) {
@@ -56,7 +56,6 @@ async function ver_producto(id) {
             document.querySelector('#idCategoria').value = json.contenido.IdCategoria;
             document.querySelector('#idProveedor').value = json.contenido.IdProveedor;
             document.querySelector('#fechaVencimiento').value = json.contenido.FechaVencimiento;
-
 
         }else{
             window.location(base_url+"Productos");
