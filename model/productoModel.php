@@ -40,6 +40,18 @@ class ProductoModel{
             $sql = $sql->fetch_object();
             return $sql;
         }
+        //Actualizar producto id
+        public function actualizar_producto($id,$codigo,$nombre,$detalle,$precio,$idcategoria,$fechavencimiento,$imagen,$idproveedor,$tipo_archivo){
+            $gaa = $this->conexion->query("CALL ActualizarProducto('{$id}','{$codigo}','{$nombre}','{$detalle}','{$precio}','{$idcategoria}','{$fechavencimiento}','{$imagen}','{$idproveedor}','{$tipo_archivo}')");
+            $sqlii = $gaa->fetch_object();
+            return $sqlii;
+        }
+        //ELIMINAR PRODUCTO ID
+        public function eliminar_producto($id){
+            $consulta = $this->conexion->query("CALL EliminarProducto('{$id}')");
+            $respp = $consulta->fetch_object();
+            return $respp;
+        }
 
 }
 ?>

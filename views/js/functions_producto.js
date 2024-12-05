@@ -160,4 +160,71 @@ async function listar_proveedores() {
 }
 
 
+//REGISTRAR PRODUCTOS
+async function ActualizarProducto(id){
+    let codigo = document.getElementById('codigo').value;
+    let nombre = document.querySelector('#nombre').value;
+    let detalle = document.querySelector('#detalle').value;
+    let precio = document.querySelector('#precio').value;
+    let idCategoria = document.querySelector('#idCategoria').value;
+    let idProveedor =document.querySelector('#idProveedor').value; 
+    let fechaVencimiento = document.querySelector('#fechaVencimiento').value;
+    let imagen = document.querySelector('#imagen').value;
+   
+    
+    if (codigo == "" || nombre == "" || detalle == ""|| precio == ""|| idCategoria == ""|| idProveedor == ""|| fechaVencimiento == ""|| imagen == "") {
+       alert("Error , campos vacios")  ;
+       return;
+    }
+try {
+   // capturamos datos del formulario html(nuevoproducto.php)
+   const datos = new FormData(formEditProducto);
+   datos.append('id_producto' , id);
+   // Enviar datos hacia el controlador
+   let Respuesta3 = await fetch(base_url+'controller/Producto.php?tipo=Actulizar',{
+       method: 'POST',
+       mode: 'cors',
+       cache: 'no-cache',
+       body: datos
+   });
+   // capturamos la respuesta par / convertido a la variable json
+   json = await Respuesta3.json();
+   if (json.status) {
+      swal("Registro", json.mensaje,"success");
+   }else{
+      swal("Registro", json.mensaje,"error");
+   }
+   console.log(json);
+} catch (e) {
+    console.log("Oops, Ocurrio un error" + e);
+}
+}
+
+
+async function eliminar_producto(id) {
+    const formData = new FormData();
+    formData.append('id_producto' , id);
+    try {
+        let respuesta = await fetch(base_url+'controller/Producto.php?tipo=eliminar',{
+            method : 'POST',
+            mode: 'cors',
+            cache:'no-cache',
+            body: formData
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            swal("Eliminado", json.mensaje,"success");
+            const tr = document.querySelector('#fila'+id); //Accedemos al tr de cada boton
+            tr.remove() //Eliminamos la fila
+        }else{
+            window.location(base_url+"Productos");
+        }
+        
+
+        console.log(json);
+    } catch (e) {
+        console.log("Oops ocurrio un error" + e);
+    }
+}
+
 

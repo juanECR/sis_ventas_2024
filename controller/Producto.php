@@ -105,4 +105,62 @@ if ($tipo == 'ver') {
    echo json_encode($response);
 
 }
+
+//REGISTRAR PRODUCTOS
+if ($tipo == "Actulizar") {
+
+    // print_r($_POST);
+    // echo $_FILES['imagen']['name'];
+ 
+   if ($_POST) {
+         $id_producto = $_POST['id_producto'];
+         $codigo = $_POST['codigo'];
+         $nombre = $_POST['nombre'];
+         $detalle = $_POST['detalle'];
+         $precio = $_POST['precio'];
+         $idCategoria = $_POST['idCategoria'];
+         $fechaVencimiento = $_POST['fechaVencimiento'];
+         $imagen = "imagen";
+         $idProveedor = $_POST['idProveedor'];
+ 
+         if ($codigo == "" || $nombre == ""||$detalle == ""|| $precio ==""|| $idCategoria == ""|| $fechaVencimiento == "" ||$imagen == "" || $idProveedor ==""){
+             $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
+         }else{
+             //cargar archivos
+             $archivo = $_FILES['imagen']['tmp_name'];
+             $destino = '../assets/img_productos/';
+             $tipoArchivo = strtolower(pathinfo($_FILES["imagen"]["name"], PATHINFO_EXTENSION));
+             $arrProducto = $objProducto->actualizar_producto($id_producto,$codigo,$nombre,$detalle,$precio,$idCategoria,$fechaVencimiento,$imagen,$idProveedor,$tipoArchivo);
+ 
+             if ($arrProducto->p_Id > 0) {
+                 $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
+ 
+                 $nombre = $arrProducto->p_Id. '.' .$tipoArchivo;
+                 if (move_uploaded_file($archivo, $destino . '' . $nombre)) {
+                 } else {
+                     $arr_Respuesta = array('status' => true, 'mensaje' => 'Registro Exitoso, error al subir imagen');
+                 }
+ 
+             } else {
+                 $arr_Respuesta = array('status'=> false, 'mensaje'=>'producto ya existe');
+             }
+             echo json_encode($arr_Respuesta);
+       }
+ 
+     }
+ }
+ 
+
+ if ($tipo == 'eliminar') {
+    /* print_r($_POST); */
+    $id_producto = $_POST['id_producto'];
+    $arr_Respuesta = $objProducto->eliminar_producto($id_producto);
+   if (empty($arr_Respuesta)) {
+      $response = array('status' => false, 'mensaje'=> "error, no informacion");
+   }else {
+    $response = array('status' => true, 'mensaje'=> "Elimnado exitosamente");
+   }
+   echo json_encode($response);
+
+}
 ?>

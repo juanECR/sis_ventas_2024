@@ -6,8 +6,8 @@
                     <!-- Header con icono -->
                     <div class="text-center mb-4">
                         <i class="bi bi-box-seam display-4 text-primary mb-3"></i>
-                        <h2 class="card-title fw-bold">Editar Producto</h2>
-                        <p class="text-muted">Complete los detalles del nuevo producto</p>
+                        <h2 class="card-title fw-bold"><i class="fa fa-pen-to-square "></i>Editar Producto</h2>
+                        <p class="text-muted">Complete los detalles del  producto</p>
                     </div>
 
                     <form id="formEditProducto">
@@ -15,7 +15,8 @@
                             <!-- Código y Nombre -->
                             <div class="col-md-6">
                                 <div class="form-floating">
-                                    <input type="text" class="form-control" id="codigo" name="codigo" required>
+                                    <input type="text" class="form-control" id="codigo" name="codigo" readonly
+                                    >
                                     <label for="codigo" readonly>Código</label>
                                 </div>
                             </div>
@@ -84,8 +85,8 @@
 
                             <!-- Botón de registro -->
                             <div class="col-12 text-center mt-4">
-                                <button type="button" class="btn btn-primary btn-lg px-5" onclick="registrarProducto();">
-                                    <i class="bi bi-check2-circle me-2"></i>Registrar Producto
+                                <button type="button" class="btn btn-outline-primary btn-lg px-5" onclick="ActualizarProducto(id_p);">
+                                    <i class="fa fa-check "></i>Actualizar Producto
                                 </button>
                             </div>
                         </div>
@@ -94,6 +95,7 @@
             </div>
         </div>
     </div>
+    <h1 class="text-center my-5"><a class="text-decoration-none" href="../panelAdministrador"><i class="fa fa-arrow-left "></i>Volver</a></h1>
 </div>
 
 <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
