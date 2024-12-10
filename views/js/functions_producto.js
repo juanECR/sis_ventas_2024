@@ -202,6 +202,19 @@ try {
 
 
 async function eliminar_producto(id) {
+    swal({
+        title: '¿Desea eliminar producto?',
+        text:'',
+        icon: "warning",
+        button: true,
+        dangerMode: true
+    }).then((willDelete)=>{
+        if (willDelete) {
+            fnt_eliminar();  
+        }
+    })
+}
+async function fnt_eliminar(id) {
     const formData = new FormData();
     formData.append('id_producto' , id);
     try {
@@ -219,7 +232,6 @@ async function eliminar_producto(id) {
         }else{
             window.location(base_url+"Productos");
         }
-        
 
         console.log(json);
     } catch (e) {
