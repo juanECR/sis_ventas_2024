@@ -33,6 +33,71 @@ if (document.querySelector('#tabla_compras')) {
     listar_compras();
 }
 
+async function  ver_compra(id) {
+    const datos = new FormData();
+    datos.append('id_compra', id);
+    try {
+        let respuesta = await fetch(base_url+'controller/compras.php?tipo=ver',{
+            method : 'POST',
+            mode: 'cors',
+            cache:'no-cache',
+            body: datos
+        });
+        json = await respuesta.json();
+        if (json.status) {
+            document.getElementById('idproducto').value = json.contenido.IdProducto;
+            document.querySelector('#idtrabajador').value= json.contenido.IdTrabajador;
+            document.querySelector('#cantidad').value= json.contenido.Cantidad;
+            document.querySelector('#precio').value= json.contenido.Precio;
+
+        }else{
+            window.location(base_url+"compras");
+        }
+
+
+        console.log(json);
+    } catch (error) {
+        
+    }
+}
+
+
+
+async function editarCompra(id){
+    let idProducto = document.getElementById('idproducto').value;
+    let idtrabajador = document.querySelector('#idtrabajador').value;
+    let cantidad = document.querySelector('#cantidad').value;
+    let precio = document.querySelector('#precio').value;
+    
+    if (idProducto == "" || idtrabajador == "" || cantidad == ""|| precio == "") {
+       alert("Error , campos vacios")  ;
+       return;
+    }
+try {
+   // capturamos datos del formulario html(nuevoproducto.php)
+   const datos = new FormData(form_edit_compra);
+   datos.append('id_compra', id);
+   // Enviar datos hacia el controlador
+   let Respuesta = await fetch(base_url+'controller/compras.php?tipo=Actualizar',{
+       method: 'POST',
+       mode: 'cors',
+       cache: 'no-cache',
+       body: datos
+   });
+   // capturamos la respuesta par / convertido a la variable json
+   json = await Respuesta.json();
+   if (json.status) {
+      swal("Registro", json.mensaje,"success");
+   }else{
+      swal("Registro", json.mensaje,"error");
+   }
+
+   console.log(json);
+} catch (e) {
+    console.log("Oops, Ocurrio un error" + e);
+}
+}
+
 
 
 //REGISTRAR COMPRAS

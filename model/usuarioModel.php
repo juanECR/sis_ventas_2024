@@ -60,6 +60,21 @@ class usuarioModel{
         $sql = $sql->fetch_object();
         return $sql;
     }
+
+    //Actualizar usuario
+    public function actualizarUsuario($id,$Nro_identidad,$RazonSocial,$Telefono,$Correo,$Departamento,$Provincia,$Distrito,$CodPostal, $Direccion,$Rol, $clave,$estado){
+        $consulta = $this->conexion->query("CALL ActualizarUsuario('{$id}','{$Nro_identidad}','{$RazonSocial}','{$Telefono}','{$Correo}','{$Departamento}','{$Provincia}','{$Distrito}','{$CodPostal}','{$Direccion}','{$Rol}','{$clave}','{$estado}')");
+        $respuesta = $consulta->fetch_object();
+        return $respuesta;
+    }
+
+    //Eliminar usuario
+    public function eliminarUsuario($id){
+        $consulta = $this->conexion->query("CALL EliminarUsuario('{$id}')");
+        $respuesta = $consulta->fetch_object();
+        return $respuesta;
+    }
+    
     
 }
 ?>

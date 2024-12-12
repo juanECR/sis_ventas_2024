@@ -27,8 +27,8 @@ if ($tipo == "listar") {
                     $cantidad = $arr_Compra[$i]->Cantidad;
                     $precio = $arr_Compra[$i]->Precio;
                     $f_compra = $arr_Compra[$i]->FechaCompra;
-                    $opciones = ' <a href="nuevoProducto"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
-                    <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>';
+                    $opciones = ' <a href="editarCompra/'.$idCompra.'"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
+                    <button class="btn btn-danger btn-sm"onclick="eliminarCompra('.$idCompra.')" ><i class="fas fa-trash-alt"></i></button>';
                     $arr_Compra[$i]->options = $opciones;
         }
         $arr_Respuesta['status'] = true;
@@ -36,6 +36,20 @@ if ($tipo == "listar") {
     }
 
     echo json_encode($arr_Respuesta);
+}
+
+if ($tipo == "ver") {
+    $id_compra = $_POST['id_compra'];
+    $arr_Respuesta = $objCompra->obtener_compraId($id_compra);
+ /*    $res_proveedor      = $objUsuario->obtener_usuario_id($arr_Respuesta->IdProveedor);
+    $arr_Respuesta->IdProveedor = $res_proveedor->RazonSocial ; */
+   /*  print_r($arr_Respuesta); */
+   if (empty($arr_Respuesta)) {
+      $response = array('status' => false, 'mensaje'=> "error, no informacio");
+   }else {
+    $response = array('status' => true, 'mensaje'=> "datos encontrados", 'contenido'=> $arr_Respuesta);
+   }
+   echo json_encode($response);
 }
 
 
@@ -61,4 +75,26 @@ if ($tipo == "registrar") {
       }
     } 
 }
+
+if ($tipo == "Actualizar") {
+    if ($_POST) {
+      $idCompra = $_POST['id_compra'];
+      $idProducto = $_POST['idproducto'];
+      $idtrabajador = $_POST['idtrabajador'];
+      $cantidad = $_POST['cantidad'];
+      $precio = $_POST['precio'];
+  
+          if ($idProducto == "" || $idtrabajador == ""||$cantidad == ""|| $precio ==""){
+              $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
+          }else{
+              $arrCompra = $objCompra->ActualizarCompra($idCompra,$idProducto,$idtrabajador,$cantidad,$precio);
+              if ($arrCompra->id > 0) {
+                  $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
+              } else {
+                  $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error al registrar producto');
+              }
+              echo json_encode($arr_Respuesta);
+        }
+      } 
+  }
 ?>

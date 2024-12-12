@@ -99,8 +99,10 @@
 </div>
 
 <script src="<?php echo BASE_URL; ?>views/js/functions_producto.js"></script>
-    <script>listar_categorias();</script>
-    <script>listar_proveedores();</script>
+    <script>
+    listar_categorias();
+    listar_proveedores();
+    </script>
 
 
     <script>

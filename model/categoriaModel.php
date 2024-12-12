@@ -30,6 +30,12 @@ class categoriaModel{
         $sql = $sql->fetch_object();
         return $sql;
      }
-    
+
+     
+     public function ActualizarCategoria($id,$nombre,$detalle){
+        $sqlin = $this->conexion->query("CALL ActualizarCategoria('{$id}','{$nombre}','{$detalle}')");
+        $sqlas = $sqlin->fetch_object();
+        return $sqlas;
+     }
 }
 ?>

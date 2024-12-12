@@ -2,10 +2,10 @@
     <div class="container">
         <div class="card shadow-lg border-0 rounded-lg">
             <div class="card-header bg-success text-white text-center py-4">
-                <h3 class="mb-0"><i class="fas fa-user-plus me-2"></i>Registrar Nuevo Usuario</h3>
+                <h3 class="mb-0"><i class="fas fa-user-plus me-2"></i>Editar Usuario</h3>
             </div>
             <div class="card-body p-4">
-                <form id="form_usuario" class="needs-validation" novalidate>
+                <form id="form_edit_usuario" class="needs-validation" novalidate>
                     <div class="row g-4">
                         <!-- Información Personal -->
                         <div class="col-md-6">
@@ -114,13 +114,16 @@
                                                 </select>
                                             </div>
                                         </div>
- <!--                                        <div class="col-md-6 mb-3">
-                                            <label for="clave" class="form-label">Contraseña</label>
+                                       <div class="col-md-6 mb-3">
+                                            <label for="estado" class="form-label">Estado</label>
                                             <div class="input-group">
-                                                <span class="input-group-text"><i class="fas fa-key"></i></span>
-                                                <input type="password" class="form-control" name="clave" id="clave" required>
+                                                <span class="input-group-text"><i class="fas fa-user-tag"></i></span>
+                                                <select name="estado" id="estado" class="form-select" required>
+                                                    <option value="1">activo</option>
+                                                    <option value="0">inactivo</option>
+                                                </select>
                                             </div>
-                                        </div> -->
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -128,8 +131,8 @@
                     </div>
 
                     <div class="text-center mt-4">
-                        <button type="button" class="btn btn-success btn-lg px-5" onclick="registrarUsuario();">
-                            <i class="fas fa-save me-2"></i>Registrar Usuario
+                        <button type="button" class="btn btn-success btn-lg px-5" onclick="actualizarUsuario(id_p);">
+                            <i class="fas fa-save me-2"></i>Actualizar Usuario
                         </button>
                     </div>
                 </form>
@@ -137,6 +140,15 @@
         </div>
     </div>
 </div>
+
+<script src="<?php echo BASE_URL; ?>views/js/functions_usuario.js"></script>
+
+<script>
+     //http://localhost/sis_ventas_2024/editarProducto/1
+     const id_p = <?php $pagina = explode("/",$_GET['views']); echo $pagina['1'];?>;
+     ver_usuario(id_p);
+</script>
+
 
 <style>
     .card {
@@ -155,4 +167,4 @@
         border: none;
     }
 </style>
-    <script src="<?php echo BASE_URL; ?>views/js/functions_usuario.js"></script>
+ 

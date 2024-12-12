@@ -7,7 +7,7 @@
                     <div class="card-header bg-success text-white text-center py-4">
                         <h3 class="mb-0">
                             <i class="fas fa-tags me-2"></i>
-                            Registrar Nueva Categoría
+                            Actualizar Nueva Categoría
                         </h3>
                     </div>
 
@@ -20,7 +20,7 @@
                             <p class="text-muted">Complete el formulario para registrar una nueva categoría</p>
                         </div>
 
-                        <form id="form_categoria" class="needs-validation" novalidate>
+                        <form id="form_edit_categoria" class="needs-validation" novalidate>
                             <!-- Campo Nombre -->
                             <div class="mb-4">
                                 <label for="nombre" class="form-label fw-bold">
@@ -66,7 +66,7 @@
                             <div class="d-grid gap-2 mt-5">
                                 <button type="button" 
                                         class="btn btn-success btn-lg py-3 shadow-sm" 
-                                        onclick="registrarCategoria();">
+                                        onclick="ActualizarCategoria(id_p);">
                                     <i class="fas fa-save me-2"></i>
                                     Registrar Categoría
                                 </button>
@@ -86,4 +86,11 @@
         </div>
     </div>
 </div>
-    <script src="<?php echo BASE_URL; ?>views/js/functions_categorias.js"></script>
+
+<script src="<?php echo BASE_URL; ?>views/js/functions_categorias.js"></script>
+<script>
+     //http://localhost/sis_ventas_2024/editarProducto/1
+     const id_p = <?php $pagina = explode("/",$_GET['views']); echo $pagina['1'];?>;
+     ver_categoria(id_p);
+</script>
+

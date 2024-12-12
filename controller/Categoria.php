@@ -17,8 +17,8 @@ if (!empty($arr_Categorias)) {
         $id_categoria = $arr_Categorias[$i]->Id;
         $categoria = $arr_Categorias[$i]->Nombre;
         $detalle = $arr_Categorias[$i]->Detalle;
-        $opciones = '<a href="" class="btn btn-success"><i class="fa fa-pencil"></i></a>
-        <a href="" class="btn btn-danger"><i class="fa fa-trash"></i></a>';
+        $opciones = '<a href="editarCategoria/'.$id_categoria.'" class="btn btn-success"><i class="fa fa-pencil"></i></a>
+        <a href="" class="btn btn-danger" onclick="eliminarCategoria('.$id_categoria.')" ><i class="fa fa-trash"></i></a>';
         $arr_Categorias[$i]->options = $opciones;
     }
     $arr_Respuesta['status'] = true;
@@ -48,5 +48,40 @@ if ($tipo == "registrar") {
       }
 
     } 
+}
+
+if ($tipo == "Actualizar") {
+    if ($_POST) {
+        $id_categoria = $_POST['id_categoria'];
+        $nombre=$_POST['nombre'];
+        $detalle=$_POST['detalle'];
+
+        if ($nombre == ""||$detalle == ""){
+            $arr_Respuesta = array('status'=> false,'mensaje'=>'Error, campos vacios');
+        }else{
+            $arrCategoria = $objCategoria->ActualizarCategoria($id_categoria,$nombre,$detalle);
+            if ($arrCategoria->p_Id >= 1) {
+                $arr_Respuesta = array('status'=>true,'mensaje'=>'Registro exitoso');
+            } else {
+                $arr_Respuesta = array('status'=>false, 'mensaje'=>'Error al registrar categoria');
+            }
+            echo json_encode($arr_Respuesta);
+      }
+
+    } 
+}
+
+if ($tipo == "ver") {
+
+    $id_categoria = $_POST['id_categoria'];
+    $arr_Respuesta = $objCategoria->obtener_categoria_id($id_categoria);
+
+   if (empty($arr_Respuesta)) {
+      $response = array('status' => false, 'mensaje'=> "error, no informacio");
+   }else {
+    $response = array('status' => true, 'mensaje'=> "datos encontrados", 'contenido'=> $arr_Respuesta);
+   }
+   echo json_encode($response);
+
 }
 ?>

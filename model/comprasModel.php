@@ -25,6 +25,18 @@ class CompraModel{
         }
         return $arrRespuesta;
     }
+
+    public function obtener_compraId($id){
+        $consulta = $this->conexion->query("SELECT * FROM compras WHERE Id = '{$id}'");
+        $responde = $consulta->fetch_object();
+        return $responde;
+    }
+
+    public function ActualizarCompra($id,$idproducto,$idtrabajador,$cantidad,$precio){
+        $sql = $this->conexion->query("CALL actualizarCompra('{$id}','{$idproducto}','{$idtrabajador}','{$cantidad}','{$precio}')");
+        $sql = $sql->fetch_object();
+        return $sql;
+    }
     
 }
 ?>

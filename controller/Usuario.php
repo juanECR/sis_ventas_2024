@@ -27,8 +27,8 @@ if ($tipo == "listar") {
                   $Estado            = $arr_Usuario[$i]->Estado; 
                   $Estado == 1 ? $arr_Usuario[$i]->Estado = '<p class="btn btn-success">activo</p>':$arr_Usuario[$i]->Estado = '<p class="btn btn-danger">inactivo</p>';   // validacion usuario  
                   $FechaRegistro        = $arr_Usuario[$i]->FechaRegistro;
-                  $opciones = ' <a href="nuevoUsuario"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
-                  <button class="btn btn-danger btn-sm"><i class="fas fa-trash-alt"></i></button>';
+                  $opciones = ' <a href="editarUsuario/'.$Id.'"><button class="btn btn-primary btn-sm"><i class="fas fa-edit"></i></button><a>
+                  <button class="btn btn-danger btn-sm" onclick="eliminarUsuario('.$Id.')" ><i class="fas fa-trash-alt"></i></button>';
                   $arr_Usuario[$i]->options = $opciones;
       }
       $arr_Respuesta['status'] = true;
@@ -38,7 +38,7 @@ if ($tipo == "listar") {
   echo json_encode($arr_Respuesta);
 }
 
-
+//---------------------------------------------------------------------------------------------------------------------------------
 
 if ($tipo == "registrar") {
    // print_r($_POST);
@@ -121,5 +121,69 @@ if (!empty($arr_Proveedor)) {
 }
 
   echo json_encode($arr_Respuesta);
+}
+
+
+if ($tipo == 'ver') {
+  /* print_r($_POST); */
+  $id_usuario = $_POST['id_usuario'];
+  $arr_Respuesta = $objUsuario->obtener_usuario_id($id_usuario);
+/*    $res_proveedor      = $objUsuario->obtener_usuario_id($arr_Respuesta->IdProveedor);
+  $arr_Respuesta->IdProveedor = $res_proveedor->RazonSocial ; */
+ /*  print_r($arr_Respuesta); */
+ if (empty($arr_Respuesta)) {
+    $response = array('status' => false, 'mensaje'=> "error, no informacio");
+ }else {
+  $response = array('status' => true, 'mensaje'=> "datos encontrados", 'contenido'=> $arr_Respuesta);
+ }
+ echo json_encode($response);
+
+}
+
+//ACTUALIZAR PRODUCTOS
+if ($tipo == "Actulizar") {
+ if ($_POST) {
+       $id_usuario = $_POST['id_usuario'];
+       $Nro_identidad=$_POST['Nro_identidad'];
+       $RazonSocial=$_POST['razon_social'];
+       $Telefono=$_POST['telefono'];
+       $Correo=$_POST['correo'];
+       $Departamento=$_POST['departamento'];
+       $Provincia=$_POST['provincia'];
+       $Distrito=$_POST['distrito'];
+       $CodPostal=$_POST['cod_postal'];
+       $Direccion=$_POST['direccion'];
+       $Rol =$_POST['rol'];
+       $estado = $_POST['estado'];
+
+       $secure_password = password_hash($Nro_identidad,PASSWORD_DEFAULT);
+
+       if ($Nro_identidad== "" ||$RazonSocial== "" || $Telefono	== ""|| $Correo	== ""|| $Departamento == ""||$Provincia== "" ||$Distrito== ""|| $CodPostal== ""|| $Direccion== ""||$Rol== "" || $secure_password== "" || $estado == "") {
+         $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error, campos vacios');
+       }else{
+           $arrUsuario = $objUsuario->actualizarUsuario($id_usuario,$Nro_identidad,$RazonSocial,$Telefono,$Correo,$Departamento,$Provincia,$Distrito,$CodPostal, $Direccion,$Rol, $secure_password,$estado);
+           if ($arrUsuario->p_Id > 0) {
+               $arr_Respuesta = array('status'=> true,'mensaje'=>'Registro exitoso');
+           } else {
+               $arr_Respuesta = array('status'=> false, 'mensaje'=>'Error al actualizar Usuario');
+           }
+           echo json_encode($arr_Respuesta);
+     }
+
+   }
+}
+
+//Eliminar usuario
+if ($tipo == 'eliminar') {
+  /* print_r($_POST); */
+  $id_usuario = $_POST['id_usuario'];
+  $arr_Respuesta = $objUsuario->eliminarUsuario($id_usuario);
+ if (empty($arr_Respuesta)) {
+    $response = array('status' => false, 'mensaje'=> "error, no informacion");
+ }else {
+  $response = array('status' => true, 'mensaje'=> "Elimnado exitosamente");
+ }
+ echo json_encode($response);
+
 }
 ?>
