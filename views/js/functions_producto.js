@@ -210,7 +210,7 @@ async function eliminar_producto(id) {
         dangerMode: true
     }).then((willDelete)=>{
         if (willDelete) {
-            fnt_eliminar();  
+            fnt_eliminar(id);  
         }
     })
 }
